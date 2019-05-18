@@ -1,3 +1,3 @@
 # baymac.github.io
 
-My Landing Page!
+My personal blog.
