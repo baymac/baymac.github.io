@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Building a simple answer bot in Android"
-date:       2016-03-04 22:20:00
+date:       2018-08-31 22:00:00
 summary:    "Configuring custom inspections in IntelliJ IDEA with Structural Search and Replacement inspection"
 
 categories: android, python, termux
