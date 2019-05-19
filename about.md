@@ -5,7 +5,7 @@ permalink: /about/
 tags: about
 ---
 
-I am a self taught programmer, currently pursuing Electronics and Communication Engineering at National Institute of Technology (NIT) Rourkela, India, fascinated by programming languages and their abilities to solve different tasks in different ways. I am also a Blockchain enthusiast and a believer of Open Source Finance. Currently researching on a Blockchain based Content Delivery Network (CDN). When not developing, I am often listening to music, playing football or writing blogs.
+I am a self taught programmer fascinated by programming languages and their abilities to solve different tasks in different ways. A Blockchain Evangelist and an Open Source Contributor. When not developing, I am often listening to music, playing football, writing blogs or reading a book.
 
 <!-- This blog is using Jekyll theme, created by [John Otander](http://johnotander.com)
 ([@4lpine](https://twitter.com/4lpine)).  
