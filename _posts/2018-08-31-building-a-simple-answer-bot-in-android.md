@@ -39,7 +39,7 @@ Give name like 'callAlarm.py'-> start writing your script on the editor
 
 Here's the code:
 
-```
+```Python
 import androidhelper 
 import time  
 

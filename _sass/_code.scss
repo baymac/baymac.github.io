@@ -1,7 +1,7 @@
 pre,
 pre code {
   background-color: transparent;
-  border-radius: #000;
+  border-radius: $pre-border-radius;
 }
 
 pre,
@@ -10,7 +10,7 @@ code {
 }
 
 code {
-  color: #fff;
+  color: #7a7a7a;
 }
 
 pre {
@@ -18,7 +18,7 @@ pre {
   line-height: 1.11;
   overflow-x: scroll;
   margin-bottom: 0.88em;
-  background-color: #000;
+  background-color: $pre-background-color;
 }
 
 .highlight .p {
@@ -46,7 +46,7 @@ pre a::before {
   text-align: right;
   opacity: 0.7;
   display: inline-block;
-  color: #fff;
+  color: $light-gray;
   margin-right: 16px;
   font-size: 13px;
   -webkit-touch-callout: none;
