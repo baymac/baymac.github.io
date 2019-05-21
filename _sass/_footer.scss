@@ -29,10 +29,18 @@ footer {
 }
 
 small > a {
-  color: black;
+  color: #1A1A1A;
 }
 
 small > a:hover {
-  color: black;
+  color: #1A1A1A;
   text-decoration: none;
+}
+
+a{
+  color: white;
+}
+
+a:hover {
+  color: #1A1A1A
 }
