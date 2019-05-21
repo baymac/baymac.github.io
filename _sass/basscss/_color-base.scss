@@ -2,12 +2,12 @@
 
 body {
   color: $dark-gray;
-  background-color: white;
+  background-color: #1A1A1A;
 }
 
 pre,
 code {
-  background-color: $lighter-gray;
+  background-color: rgb(51, 51, 51);
   border-radius: $border-radius;
 }
 

@@ -2,9 +2,9 @@
 title:       Parichay's blog
 email:       parichay.barpandab@gmail.com
 author:      Parichay Barpanda
-description: "Lifehacks for beeing lazy."
+description: "Build a better world"
 baseurl:     ""
-url:         "http://baymac.me"
+url:         "https://www.baymac.me"
 date_format: "%b %-d, %Y"
 
 # Google services
@@ -55,13 +55,13 @@ flattr_button:
 # Post sharing icons
 show_sharing_icons: false
 # Change to 'true' to enable individual icons
-share_facebook: true
+share_facebook: false
 share_twitter: true
 share_googleplus: false
-share_linkedin: true
+share_linkedin: false
 share_digg: false
 share_tumblr: false
-share_reddit: true
+share_reddit: false
 share_stumbleupon: false
 share_hackernews: false
 

@@ -4,10 +4,15 @@
 }
 
 .site-header a {
-  color: #333;
+  color: #fff;
   font-size: $h3;
   font-weight: 300;
   background-image: none;
+  text-decoration: none;
+}
+
+.site-header a:hover {
+  color: #385C7B
 }
 
 .site-header .site-title {
@@ -19,18 +24,20 @@
 }
 
 .site-header nav a {
-  color: #666;
+  color: #fff;
+  
 }
 
 .site-header nav a:hover,
 .site-header nav a:focus,
 .site-header nav a:active {
-  color: #444;
+  color: #385C7B;
   opacity: 1;
 }
 
 .site-nav a + a {
   margin-left: 1em;
+  
 }
 
 .site-header a:hover,
@@ -38,6 +45,7 @@
 .posts .post a:hover .post-title,
 .posts .post a:hover .post-summary {
   opacity: 0.88;
+  
 }
 
 .site-header {
