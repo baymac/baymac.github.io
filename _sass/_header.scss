@@ -46,6 +46,14 @@
 .posts .post a:hover .post-title,
 .posts .post a:hover .post-summary {
   opacity: 0.88;
+}
+
+.posts .post a .post-title {
+  text-decoration: none;
+}
+
+.posts .post a:hover .post-title {
+  color: #385C7B;
   
 }
 
