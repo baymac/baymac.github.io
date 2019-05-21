@@ -45,7 +45,7 @@
 }
 
 .mt2 {
-  margin-top: 0.6rem;
+  margin-top: $space-1;
 }
 
 .mr2 {
@@ -53,6 +53,7 @@
 }
 
 .mb2 {
+  margin-top: -$space-2;
   margin-bottom: $space-2;
 }
 
@@ -140,7 +141,7 @@
 }
 
 .p2 {
-  padding: $space-2;
+  padding: 0;
 }
 
 .py2 {

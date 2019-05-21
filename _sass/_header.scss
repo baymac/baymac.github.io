@@ -1,20 +1,19 @@
 .site-header {
   padding-top: 0.5rem;
-  padding-bottom: 1.4rem;
+  padding-bottom: 1.3rem;
   background-color: black;
 }
 
 .site-header a {
-  color: #fff;
+  color: #385C7B;
   font-size: $h3;
   font-weight: 300;
   background-image: none;
   text-decoration: none;
-  
 }
 
 .site-header a:hover {
-  color: #385C7B
+  color: #fff
 }
 
 .site-header .site-title {
@@ -26,14 +25,14 @@
 }
 
 .site-header nav a {
-  color: #fff;
+  color: #385C7B;
   
 }
 
 .site-header nav a:hover,
 .site-header nav a:focus,
 .site-header nav a:active {
-  color: #385C7B;
+  color: #fff;
   opacity: 1;
 }
 
