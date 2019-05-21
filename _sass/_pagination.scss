@@ -9,24 +9,27 @@
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: #fafafa;
+  background: #417096;
   border-radius: 0.1875em;
-  border: 1px solid #f3f3f3;
-  color: #333333;
+  border: 1px solid #417096;
+  color: #000;
   padding: 1em 1.5em;
+  text-decoration: none;
 }
 
 .pagination .disabled {
+  color: #333333;
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .pagination a:hover, .pagination a:focus {
-  background: white;
-  color: #477dca;
+  background: #84c0f1;
+  color: #000;
 }
 
 .pagination a:active {
-  background: #f7f7f7;
+  background: #417096;
 }
 
 .pagination .button {

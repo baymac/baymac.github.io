@@ -27,3 +27,12 @@ footer {
   padding: $footer-padding;
   text-align: center;
 }
+
+small > a {
+  color: black;
+}
+
+small > a:hover {
+  color: black;
+  text-decoration: none;
+}

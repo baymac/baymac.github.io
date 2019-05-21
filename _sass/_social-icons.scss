@@ -13,10 +13,13 @@
   cursor: pointer;
   opacity: 0.8;
   padding: 0.2em;
+  text-decoration: none;
+  color: black;
 }
 
 .social-icons a.fa:hover {
   opacity: 1;
+  color: white;
 }
 
 .social-icons iframe[title=Flattr] {

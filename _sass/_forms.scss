@@ -49,8 +49,12 @@ textarea {
   width: 100%;
 }
 
+input, select, textarea {
+  color: white;
+}
+
 .field-light {
-  background-color: white;
+  background-color: #385C7B;
   transition: box-shadow .2s ease;
   border-style: solid;
   border-width: $border-width;
@@ -58,14 +62,28 @@ textarea {
   border-radius: $border-radius;
 }
 
+.field-light::placeholder {
+  color: white;
+  font-weight: 4;
+}
+
+.field-light:focus::placeholder {
+  color: transparent;
+}
+
+option { 
+  /* Whatever color  you want */
+  background-color: #82caff;
+}
+
 .field-light:focus {
   outline: none;
-  border-color: $blue;
+  border-color: $border-color;
   box-shadow: 0 0 2px rgba($blue,.5);
 }
 
 .field-light:disabled {
-  color: $mid-gray;
+  color: #000;
   background-color: $darken-2;
 }
 
@@ -88,7 +106,6 @@ textarea {
 .field-light.is-error {
   border-color: $red;
 }
-
 
 .radio-light,
 .checkbox-light {
