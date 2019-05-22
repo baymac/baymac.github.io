@@ -9,8 +9,13 @@ pre,
 code {
   background-color: rgb(51, 51, 51);
   border-radius: $border-radius;
+  color: white;
 }
 
+
+ul, ol {
+  color: white;
+}
 hr {
   border: 0;
   border-bottom-style: solid;
