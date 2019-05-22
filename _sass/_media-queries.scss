@@ -12,6 +12,10 @@
     text-align: left;
   }
 
+  .post {
+    margin: 0;
+  }
+
   .site-nav {
     margin-top: 0;
   }
@@ -48,12 +52,14 @@
   html {
     font-size: 18px;
   }
+  
 }
 
 @media screen and (min-width: $viewport-large) {
   html {
     font-size: 20px;
   }
+  
 }
 
 @media screen and (min-width: $viewport-large + 14) {
@@ -61,4 +67,5 @@
     max-width: $measure-width + 14;
     margin-left: -7em;
   }
+  
 }

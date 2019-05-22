@@ -1,11 +1,12 @@
 
-.posts {
-  margin: 0;
-}
 
 .posts .post {
   margin-bottom: 0.75em;
   border-bottom: thin solid #385C7B;
+}
+
+.post {
+  margin: 1rem;
 }
 
 .posts .post:last-child {
@@ -42,6 +43,8 @@
   color: #fff; // this is page date and read minutes colors
   font-style: italic;
 }
+
+
 
 .post-meta {
   margin-top: -0.5rem;
