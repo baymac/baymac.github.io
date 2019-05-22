@@ -21,6 +21,11 @@ a {
   color: #385C7B;
 }
 
+a:hover {
+  text-decoration: none;
+  color: rgba(56, 92, 123, 0.678);
+}
+
 hr {
   border: 0;
   border-bottom-style: solid;
