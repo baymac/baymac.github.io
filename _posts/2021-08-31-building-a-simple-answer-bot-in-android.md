@@ -24,8 +24,6 @@ Currently supported languages for SL4A are:
 * Tcl
 * Rexx using BRexx
 
-(source: https://en.wikipedia.org/wiki/Scripting_Layer_for_Android)
-
 Being interested, I downloaded the Qpython3 app from Play Store. Link [here](https://play.google.com/store/apps/details?id=org.qpython.qpy3).
 
 The real script:
@@ -64,7 +62,6 @@ while True:
       exit(0)
   print('Time not arrived')   
   time.sleep(20)
-
 ```
 
 This code is more or less intuitive. Let me break it for you:
