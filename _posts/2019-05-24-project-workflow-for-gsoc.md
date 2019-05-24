@@ -169,9 +169,15 @@ We cannot send PRs from _`release`_ branch and use the gitflow release finish st
 
 7. Once the _`hotfix is`_ complete it is merged to both _`develop`_ and _`master`_
 
-We will also use `GitKraken Linux Client` to visualise the git commits, tags, branches etc. Personally I find it helpful.
+#### Graphical Tool to visualise the git flow
 
-#### Using plain Git to replicate the GitFlow Workflow with PRs
+We will also use `GitKraken Linux Client` to manage the git commits, tags, branches etc. Personally I find it helpful. 
+
+There are other options like `GitHub Desktop`, `Smart Git`, `Tower 2` etc.
+
+#### Using plain Git to replicate the GitFlow Workflow
+
+This workflow is slightly modified to support merging with the help of Pull Requests.
 
 ```
 git init
