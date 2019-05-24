@@ -9,27 +9,30 @@
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: #417096;
+  background: #84c0f1;
+  border: 1px solid #84c0f1;
   border-radius: 0.1875em;
-  border: 1px solid #417096;
-  color: #000;
+  color: black;
   padding: 1em 1.5em;
   text-decoration: none;
 }
 
 .pagination .disabled {
-  color: #333333;
+  color: #fafafa;
+  background: #303030;
+  border: 1px solid #303030;
   opacity: 0.5;
   pointer-events: none;
 }
 
 .pagination a:hover, .pagination a:focus {
-  background: #84c0f1;
-  color: #000;
+  border: 1px solid #417096;
+  background: #417096;
 }
 
 .pagination a:active {
-  background: #417096;
+  border: 1px solid #84c0f1;
+  background: #84c0f1;
 }
 
 .pagination .button {
