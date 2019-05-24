@@ -188,20 +188,21 @@ There are other options like `GitHub Desktop`, `Smart Git`, `Tower 2` etc.
 
 This workflow is slightly modified to support merging with the help of Pull Requests.
 
-```
+{% highlight shell %}
+
 git init
 
 git checkout -b develop
 
 git checkout -b feature/<feature-branch>
 
-// Push commits required for the feature
+# Push commits required for the feature
 
 git push origin feature/<feature-branch>
 
-// Send PR to develop branch
+# Send PR to develop branch
 
-// Merge PR after review by mentors
+# Merge PR after review by mentors
 
 git pull origin develop
 
@@ -211,19 +212,19 @@ git push origin :feature/<feature-branch>
 
 git checkout -b release/<version-number>
 
-// Push commits to your release branches like bug fixes, documentation etc
+# Push commits to your release branches like bug fixes, documentation etc
 
 git push origin release/<version-number>
 
-// Send PR to develop branch
+# Send PR to develop branch
 
-// Merge PR after review by mentors
+# Merge PR after review by mentors
 
 git pull origin develop
 
 git checkout release/<version-number>
 
-git tag -a <tag-name> -m "<your message>"
+git tag -a <tag-name> -m <your message>
 
 git checkout master 
 
@@ -237,16 +238,15 @@ git branch -d release/<version-number>
 
 git push origin :release/<version-number>
 
-/* NOTE: In gitflow the release branch was merged with master and 
-   tag was merged with develop, but we doing opposite here
-   since the PR has to be merged with the develop branch to see the
-   files changed 
-*/
+# NOTE: In gitflow the release branch was merged with master and 
+# tag was merged with develop, but we doing opposite here
+# since the PR has to be merged with the develop branch to see the
+# files changed 
 
 git checkout develop
 
-// start next development iteration
-```
+# start next development iteration
+{% endhighlight %}
 
 You can also check other simpler workflows:
 
