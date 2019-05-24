@@ -50,7 +50,7 @@ textarea {
 }
 
 input, select, textarea {
-  color: rgb(8, 8, 8);
+  color: rgba(255, 255, 255, 0.63);
 }
 
 .field-light {
@@ -73,7 +73,7 @@ input, select, textarea {
 
 .field-light:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.63);
+  border-color: #385C7B;
   box-shadow: 0 0 2px rgba($blue,.5);
 }
 
