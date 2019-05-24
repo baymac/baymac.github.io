@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Project Workflow for GSoC"
-date:       2019-05-23 13:48:00
+date:       2019-05-24 13:48:00
 summary:    "Details of development workflow setup for Google Summer of Code (GSoC) project under Jenkins"
 
 categories: jira scrumboards git jenkins git-flow
