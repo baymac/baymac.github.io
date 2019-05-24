@@ -67,5 +67,111 @@ There are also other sections that can be helpful like releases, tests, componen
 
 ### Git Workflow
 
+For our project we chose Git over any other SCM like Subversion or Mercurial since all Jenkins repositories are hosted on GitHub and Git makes merging simpler than others. There multiple Git Workflow Models like Feature Branch Workfow, Gitflow Workflow etc. We decided to follow Gitflow Workflow. The idea is to 3 mainline branches and temporary feature branches:
 
+1. `master` - Only tagged commits from `develop` branch are merged into this branch
+2. `develop` - When a feature branch is complete it is merged into this branch
+3. `release` - After a feature implementation passes all tests and reviewed then it is merged into this branch
+4. `\<feature-branch\>` - A branch checked out from `develop` branch when a new feature has to be implemented
 
+This stricting branching model can be tedious to maintain through git CLI. To aid in this development cycle a tool called [`Gitflow`](https://github.com/petervanderdoes/gitflow-avh) is used.
+
+![git-flow-model](/assets/2019-05-24-project-workflow-for-gsoc/git-flow-model.png)
+`A visualisation of the gitflow model` [[1]](https://nvie.com/posts/a-successful-git-branching-model/)
+
+Git Flow is simply a wrapper around Git that abstracts the underlying branch modelling with intuitive commands.
+
+On Ubuntu, install `git-flow` using:
+```
+sudo apt-get install git-flow
+```
+For other OS, see [this](https://github.com/petervanderdoes/gitflow-avh/wiki/Installation).
+
+To start the workflow, run:
+```
+git flow init
+```
+Then follow the on-screen instructions for setup.
+
+![git-flow-init](/assets/2019-05-24-project-workflow-for-gsoc/git-flow-init.png)<br/>
+
+#### To start a feature branch
+
+```
+git flow feature start <feature-branch>
+```
+
+In the background it does a `git checkout develop` and `git checkout -b <feature-branch>`.
+
+Push commits to the feature branch.
+
+#### Start a pull request [Optional]
+
+Push the _`feature`_ branch to GitHub and start a pull request to merge into the _`develop`_ branch. `DO NOT MERGE` even after approval of reviewers. You have to do it with the next `Gitflow` command.
+
+#### To finish a feature branch [Skip if sending PR] 
+
+```
+git flow feature finish <feature-branch>
+```
+
+In the background it does a `git checkout develop` and `git merge <feature-branch>`.
+
+#### To start a release branch
+
+Fork a _`release`_ branch off of _`develop`_ branch after enough features are acquired for a release.
+
+After this no new features are added. Only bug fixes, documentation and other release-oriented tasks. 
+
+Once it is ship ready, the _`release`_ branch gets merged into master and tagged with a version number. In addition, it should be merged back into develop.
+
+Using a dedicated branch to prepare releases makes it possible for one team to polish the current release while another team continues working on features for the next release.
+
+To create a release branch:
+
+```
+git flow release start <version-number>
+```
+
+In the background it does a `git checkout develop` and `git checkout -b release/<version-number>`.
+
+Push commits to the release branch.
+
+#### Start a pull request [Optional]
+
+Push the _`release`_ branch to GitHub and start a pull request to merge into the _`develop`_ branch. `DO NOT MERGE` even after approval of reviewers. You have to do it with the next `Gitflow` command.
+
+#### To finish a release branch
+
+```
+git flow release finish '<version-number>'
+```
+
+In the background it does a `git checkout master`, `git merge release/<version-number>`, `git checkout develop` and `git merge release/<version-number>` and `git branch -d release/<version-number>`.
+
+#### The overall flow of Gitflow is:
+
+1. A _`develop`_ branch is created from _`master`_
+
+2. A _`release`_ branch is created from _`develop`_
+
+3. _`Feature`_ branches are created from _`develop`_
+
+4. When a _`feature`_ is complete it is merged into the _`develop`_ branch
+
+5. When the _`release`_ branch is done it is merged into _`develop`_ and _`master`_
+
+6. If an issue in _`master`_ is detected a _`hotfix`_ branch is created from _`master`_
+
+7. Once the _`hotfix is`_ complete it is merged to both _`develop`_ and _`master`_
+
+We will also use `GitKraken Linux Client` to visualise the git commits, tags, branches etc. Personally I find it helpful.
+
+You can also check other simpler workflows:
+
+* [GitLab Flow](https://about.gitlab.com/2014/09/29/gitlab-flow/)
+* [GitHub Flow](https://guides.github.com/introduction/flow/)
+
+Resources:
+
+[Atlassian GitFlow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)

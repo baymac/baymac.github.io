@@ -18,12 +18,12 @@ ul, ol {
 }
 
 a {
-  color: #385C7B;
+  color: #5D8CED;
 }
 
 a:hover {
   text-decoration: none;
-  color: rgba(56, 92, 123, 0.678);
+  color: rgb(55, 116, 238);
 }
 
 hr {
@@ -37,6 +37,11 @@ hr {
   color: white;
 }
 
-h3 {
-  color: white;
+.h2 {
+  color: #385C7B;
+  font-weight: 600;
+}
+
+h3, h4 {
+  color: #5D8CED;
 }
