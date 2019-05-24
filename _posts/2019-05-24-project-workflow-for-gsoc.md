@@ -65,6 +65,15 @@ To add issues to the sprints you can either add the desired sprint's link at the
 
 There are also other sections that can be helpful like releases, tests, components etc.
 
+One of the interesting feature of JIRA is JIRA Query Language (JQL). This allows you to define filter for searches. You can have predefined filters for the board as well. 
+
+Select `Board` (top right) then `Configure` then `Quick Filter`. For example:
+
+![quick-filters](/assets/2019-05-24-project-workflow-for-gsoc/quick-filters.png)
+`Quick Filters in our scrum board`
+
+You can define your own filters. JIRA also offers lots of other customisations options like card colours, columns, issue detail view etc. You can explore them based on your needs.
+
 ### Git Workflow
 
 For our project we chose Git over any other SCM like Subversion or Mercurial since all Jenkins repositories are hosted on GitHub and Git makes merging simpler than others. There multiple Git Workflow Models like Feature Branch Workfow, Gitflow Workflow etc. We decided to follow Gitflow Workflow. The idea is to 3 mainline branches and temporary feature branches:
