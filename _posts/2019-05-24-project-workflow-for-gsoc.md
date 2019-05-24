@@ -171,7 +171,7 @@ We cannot send PRs from _`release`_ branch and use the gitflow release finish st
 
 #### Graphical Tool to visualise the git flow
 
-We will also use `GitKraken Linux Client` to manage the git commits, tags, branches etc. Personally I find it helpful. 
+We will also use `GitKraken Linux Client` to manage commits, tags, branches etc. Personally I find it helpful. 
 
 There are other options like `GitHub Desktop`, `Smart Git`, `Tower 2` etc.
 
