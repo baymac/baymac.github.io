@@ -4,7 +4,7 @@ title:      "The beginning of coding period"
 date:       2019-05-01 17:10:00
 summary:    "Things accomplished in the first week of coding period"
 
-categories: jenkins gsoc-2019
+categories: jenkins gsoc 
 ---
 
 On Monday, May 27, the Google Summer of Code 2019 Coding Period started. Our team had been regularly doing sync ups to plan how to carry out the project successfully in the next 3 months. We do 2 meetings each week that motivates me to keep working throughout the week. The project workflow had been agreed upon. Jenkins community is immune to outside noise and everyone is very professional. It has been an exciting month since this is my first Google Summer of Code. I had fairly less experience in `Java` or `Object Oriented Design` per se but I wanted a new challenge. For the past 2 months I have been learning the Java 8 and its design pattern. I would highly recommend the following books:

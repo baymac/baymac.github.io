@@ -4,7 +4,7 @@ title:      "Project Workflow for GSoC"
 date:       2019-05-24 13:48:00
 summary:    "Details of development workflow setup for Google Summer of Code (GSoC) project under Jenkins"
 
-categories: jira scrumboards git jenkins git-flow
+categories: jira git jenkins gsoc
 ---
 
 For my GSoC project, I will be developing plugins for Jenkins Community. We required two things:
@@ -12,7 +12,7 @@ For my GSoC project, I will be developing plugins for Jenkins Community. We requ
 1. Track objectives and issues in one place
 2. Manage code reviews and plugin releases
 
-### Issue Tracker
+## Issue Tracker
 
 For the first problem, we started using `GitHub Project boards` for objectives and `GitHub issues` for issues. Project boards were a bit clumsy so we preferred using a Google Doc instead. For issues, the GitHub issues are just okay but we felt keeping discussions and codes separate is a better idea.
 
@@ -44,9 +44,9 @@ For our project, we decided to use:
 
     A scrum was created with the name:
     
-    * `Google Summer of Code 2019` - [link](https://issues.jenkins-ci.org/secure/RapidBoard.jspa?rapidView=591)<br/><br/>
+    * `Google Summer of Code 2019` - [link](https://issues.jenkins-ci.org/secure/RapidBoard.jspa?rapidView=591)<br/>
   
-    Four sprints were created to track the issues of all GSoC 2019 projects under Jenkins, namely
+    Four sprints were created to track the issues of all GSoC 2019 projects under Jenkins, namely:
 
     * `GSoC 2019. Community Bonding`
     * `GSoC 2019. Code Phase 1`
@@ -61,9 +61,7 @@ JIRA Scrum boards comes with another section called `Backlog` which has a list o
 ![Active Sprints Section](/assets/2019-05-24-project-workflow-for-gsoc/active-sprint-scrum-board.png)
 `The Active Sprints Section of Scrum Board`
 
-To add issues to the sprints you can either add the desired sprint's link at the time of issue creation or simply drag and drop from the backlog.
-
-There are also other sections that can be helpful like releases, tests, components etc.
+To add issues to the sprints you can either add the desired sprint's link at the time of issue creation or simply drag and drop from the backlog. There are also other sections that can be helpful like releases, tests, components etc.
 
 One of the interesting feature of JIRA is JIRA Query Language (JQL). This allows you to define filter for searches. You can have predefined filters for the board as well. 
 
@@ -74,7 +72,7 @@ Select `Board` (top right) then `Configure` then `Quick Filter`. For example:
 
 You can define your own filters. JIRA also offers lots of other customisations options like card colours, columns, issue detail view etc. You can explore them based on your needs.
 
-### Git Workflow
+## Git Workflow
 
 For our project we chose Git over any other SCM like Subversion or Mercurial since all Jenkins repositories are hosted on GitHub and Git makes merging simpler than others. There multiple Git Workflow Models like Feature Branch Workfow, Gitflow Workflow etc. We decided to follow Gitflow Workflow. The idea is to 3 mainline branches and temporary feature branches:
 
@@ -106,7 +104,7 @@ Then follow the on-screen instructions for setup.
 
 ![git-flow-init](/assets/2019-05-24-project-workflow-for-gsoc/git-flow-init.png)<br/>
 
-#### To start a feature branch
+### To start a feature branch
 
 ```
 git flow feature start <feature-branch>
@@ -116,13 +114,13 @@ In the background it does a `git checkout develop` and `git checkout -b <feature
 
 Push commits to the feature branch.
 
-#### Start a pull request 
+### Start a pull request 
 
 This is a custom step and not a part of Gitflow workflow, if your repository doesn't need you to send PRs then feel free to move on to the next step. 
 
 Push the _`feature`_ branch to GitHub and start a pull request to merge into the _`develop`_ branch. After merging this PR, do a local sync using `git pull origin develop` and manually delete the feature branch using `git branch -D <feature-branch>` (to delete local branch) and `git push origin :<feature-branch>`. You might also want to do `git fetch --all --prune` on other machines.
 
-#### To finish a feature branch [Skip if sending PR] 
+### To finish a feature branch [Skip if sending PR] 
 
 ```
 git flow feature finish <feature-branch>
@@ -130,7 +128,7 @@ git flow feature finish <feature-branch>
 
 In the background it does a `git checkout develop` and `git merge <feature-branch>`.
 
-#### To start a release branch
+### To start a release branch
 
 This step is to fork a _`release`_ branch off of _`develop`_ branch after enough features are acquired for a release.
 
@@ -150,7 +148,7 @@ In the background it does a `git checkout develop` and `git checkout -b release/
 
 Push commits to the release branch.
 
-#### To finish a release branch
+### To finish a release branch
 
 ```
 git flow release finish '<version-number>'
@@ -158,11 +156,11 @@ git flow release finish '<version-number>'
 
 In the background it does a `git checkout master`, `git merge release/<version-number>`, `git checkout develop` and `git merge release/<version-number>` and `git branch -d release/<version-number>`.
 
-#### Sending pull request from release branch
+### Sending pull request from release branch
 
 We cannot send PRs from _`release`_ branch and use the gitflow release finish step without breaking the PR workflow. If you do not merge your PR and follow the gitflow release finish step then the PR will be marked closed as the release branch will be deleted. If you want to do it then follow along, at the end there are manual steps to do it using the Git CLI. 
 
-#### The overall flow of Gitflow
+### The overall flow of Gitflow
 
 1. A _`develop`_ branch is created from _`master`_
 
@@ -178,13 +176,13 @@ We cannot send PRs from _`release`_ branch and use the gitflow release finish st
 
 7. Once the _`hotfix is`_ complete it is merged to both _`develop`_ and _`master`_
 
-#### Graphical Tool to visualise the git flow
+### Graphical Tool to visualise the git flow
 
 We will also use `GitKraken Linux Client` to manage commits, tags, branches etc. Personally I find it helpful. 
 
 There are other options like `GitHub Desktop`, `Smart Git`, `Tower 2` etc.
 
-#### Using plain Git to replicate the GitFlow Workflow
+### Using plain Git to replicate the GitFlow Workflow
 
 This workflow is slightly modified to support merging with the help of Pull Requests.
 

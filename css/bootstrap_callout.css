@@ -58,9 +58,14 @@
 .list-inline {
     display: table-row;
 }
+
 .list-inline li {
     display: table-cell;
     padding-left: 1em;
+}
+
+.list-inline li:first-child {
+    padding-left: 0% 
 }
 .list-inline i {
     padding-right: 0.3em;

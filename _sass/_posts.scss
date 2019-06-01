@@ -2,11 +2,18 @@
 
 .posts .post {
   margin-bottom: 0.75em;
-  border-bottom: thin solid #5D8CED;
+  border-bottom: thin solid $my-blue;
 }
 
-.post {
-  margin: 1rem;
+// .post {
+//   margin-left: 1rem;
+//   margin-right: 1rem;
+//   margin-bottom: 1rem;
+// }
+
+.posts {
+  margin: 0%;
+  padding: 0%;
 }
 
 .posts .post:last-child {
@@ -18,7 +25,7 @@
 .post-link .post-title {
   margin-top: 0;
   font-weight: 550;
-  color: #5D8CED;
+  color: #fff;
 }
 
 .post-footer {

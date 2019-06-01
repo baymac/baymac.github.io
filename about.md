@@ -1,11 +1,17 @@
 ---
 layout: page
-title: About Me
+title: About me
 permalink: /about/
 tags: about
 ---
 
-I am a self taught programmer fascinated by programming languages and their abilities to solve different tasks in different ways. A Blockchain Evangelist and an Open Source Contributor. When not developing, I am often listening to music, playing football, writing blogs or reading a book.
+* An electronics engineer who loves to code.
+
+* A blockchain enthusiast and a open source contributor.
+
+* A lover of FC Barcelona and Lionel Messi. 
+
+* Often listening to music, playing football, reading books.
 
 <!-- This blog is using Jekyll theme, created by [John Otander](http://johnotander.com)
 ([@4lpine](https://twitter.com/4lpine)).  

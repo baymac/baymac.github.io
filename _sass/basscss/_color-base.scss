@@ -2,7 +2,7 @@
 
 body {
   color: $dark-gray;
-  background-color: #1A1A1A;
+  background-color: #000;
 }
 
 pre,
@@ -18,7 +18,7 @@ ul, ol {
 }
 
 a {
-  color: #5D8CED;
+  color: $my-blue;
 }
 
 a:hover {
@@ -34,16 +34,16 @@ hr {
 }
 
 .blog-title {
-  color: #5D8CED;
+  color: #fff;
 }
 
 .h2 {
-  color: #5D8CED;
+  color: $my-blue;
   font-weight: 600;
 }
 
 .btn-default {
-  color: #5D8CED;
+  color: $my-blue;
 }
 
 .btn-default:hover {
@@ -51,16 +51,16 @@ hr {
 }
 
 .btn-primary {
-  background: #5D8CED;
-  border-color: #5D8CED;
+  background: $my-blue;
+  border-color: $my-blue;
 }
 
 .btn-primary {
-  background: #5D8CED;
-  border-color: #5D8CED;
+  background: $my-blue;
+  border-color: $my-blue;
 }
 
 
 h2, h3, h4 {
-  color: #5D8CED;
+  color: $my-blue;
 }

@@ -29,7 +29,7 @@ footer {
 }
 
 small > a {
-  color: #5D8CED;
+  color: $my-blue;
 }
 
 small > a:hover {
@@ -38,5 +38,5 @@ small > a:hover {
 }
 
 .social-icons a.fa {
-  background-color: #5D8CED;
+  background-color: $my-blue;
 }
