@@ -6,8 +6,6 @@ summary:    "Configuring custom inspections in IntelliJ IDEA with Structural Sea
 categories: android python termux
 ---
 
-A little backside of this story:
-
 I had to make a phone call early in the morning to wake up a friend. The previous night I was working on a Twitter bot to reply to certain type of tweets on my Twitter account(read: Tweepy), I realised how fun it was to write codes in Python. The syntaxes are very intuitive and it is immensely powerful for hacking.
 
 After spending my entire evening on learning about python syntaxes, libraries, and frameworks, I found about a script engine called Qpython which runs Python on Android. It contains a Python shell, editor, and the SL4A Library for Android. The Scripting Layer for Android(SL4A) is a library that allows the creation and running of scripts written in various scripting languages directly on Android devices.
