@@ -19,9 +19,9 @@ bing_verification:
 # Optional features
 animated:             false
 show_related_posts:   false
-show_post_footers:    false
+show_post_footers:    true
 show_social_icons:    true
-ajaxify_contact_form: false
+ajaxify_contact_form: true
 enable_mathjax: false
 enable_jquery: true
 enable_bootstrap: true
