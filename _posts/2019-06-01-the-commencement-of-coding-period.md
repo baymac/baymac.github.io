@@ -191,11 +191,14 @@ I started using Debugger for the first time and it actually helped me single out
 
 ### Acknowledgements
 
+Our team consists of:
 1. [LinuxSuRen](https://github.com/LinuxSuRen) (The originator of this project idea)
 2. [Marky](https://github.com/markyjackson-taulia) (The org admin who manages our project meetings to code reviews)
 3. [Joseph](https://github.com/casz) (The chief code reviewer)
 4. [Justin](https://github.com/justinharringa) (The mentor who helps with tech)
 5. [Jeff](https://github.com/jeffpearce) (The mentor who helps with detailed code reviews)
+
+Honorable Mentions:
 6. [Oleg](https://github.com/oleg-nenashev) (The org admin who makes Jenkins feel like a family)
 7. [Greg](https://github.com/gmessner) (The creator of GitLab4J APIs)
 8. [Stephen](https://github.com/stephenc) (The backbone of all SCM related Plugins)
