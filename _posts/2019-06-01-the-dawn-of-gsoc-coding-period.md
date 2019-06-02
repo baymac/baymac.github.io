@@ -25,19 +25,19 @@ I finished some of the nit things that would be helpful for our project. One suc
 
 The problem with existing GitLab Plugin is that it doesn't have a separate API plugin and defines the API inside itself. This cause following problems:
 
-1. Dedicated effort to maintain an API for GitLab would required which is different from the scope of our plugin goals
+1. Dedicated efforts to maintain an API for GitLab would required which is different from the scope of our plugin goals
 
-2. Other plugins might not be able to reuse the GitLab Java APIs defined inside GitLab Plugin. Even if they extend this plugin, they will also be inheriting excess functionality and that is not a great idea.
+2. Other plugins might not be able to reuse the GitLab Java APIs defined inside GitLab Plugin. Even if they extend this plugin, they will also be inheriting excess functionality and that might be a problem.
 
 3. Keeping the APIs inside the plugin makes the codebase bigger. Plugins should be lightweight and limited to their functionality. 
 
 This has been correctly implemented by GitHub Plugins in Jenkins. We plan to follow the similar convention of 3 SCM plugins:
 
-1. GitHub API Plugin - Wraps GitHub Java API 
+1. `GitHub API Plugin` - Wraps GitHub Java API 
 
-2. GitHub Plugin - Build Trigger and Webhook Management
+2. `GitHub Plugin` - Build Trigger and Webhook Management
 
-3. GitHub Branch Source Plugin - To support Multibranch Pipeline Jobs and Folder organisation
+3. `GitHub Branch Source Plugin` - To support Multibranch Pipeline Jobs and Folder organisation
 
 So, I wanted to implement a Java API for GitLab or maybe extend one. But that would have taken a lot of time as Oleg Nenashev suggested. To our good luck, I found a well maintained GitLab Java API repository by gmessner. This guy has been doing excellent work to maintain the codebase:
 
