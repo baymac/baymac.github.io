@@ -81,7 +81,7 @@ So I prepared a design document that aimed at containing the following things:
 
 Mostly everthing was covered sans a few things that could only be realised after implementing.
 
-## Coding Phase 1
+## Coding Phase I
 
 This is when the fun begins or maybe a little bit of stress because you have a responsibility of pushing stable codes. The plan for this phase is to implement the `GitLab Branch Source Plugin`. This plugin will handle the pipeline builds for multiple branches. The current version of `GitLab Plugin` has a few problems and it does not fully support multibranch pipeline. If you want to know more about the project you may take a look at our project decription [page](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline/).
 
