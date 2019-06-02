@@ -13,7 +13,7 @@ On Monday, May 27, the Google Summer of Code 2019 Coding Period started. Our tea
 2. `Core Java for Impatient` by Cay S. Horstmann
 3. `Effective Java` by Joshua Bloch
 
-A friend knew I would need these books for GSoC so he gifted this to me. A shout out to my friend [Shibasis Pattnaik](https://github.com/shibasis0801/).
+A friend knew I would need these books for GSoC so he gifted it to me. A shout out to my friend [Shibasis Pattnaik](https://github.com/shibasis0801/).
 
 ## Project Tools
 
