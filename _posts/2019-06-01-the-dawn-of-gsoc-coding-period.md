@@ -29,7 +29,7 @@ The problem with existing GitLab Plugin is that it doesn't have a separate API p
 
 2. Other plugins might not be able to reuse the GitLab Java APIs defined inside GitLab Plugin. Even if they extend this plugin, they will also be inheriting excess functionality and that might be a problem.
 
-3. Keeping the APIs inside the plugin makes the codebase bigger. Plugins should be lightweight and limited to their functionality. 
+3. Keeping the APIs inside the plugin makes the codebase larger. Plugins should be lightweight and limited to their functionality. 
 
 This has been correctly implemented by GitHub Plugins in Jenkins. We plan to follow the similar convention of 3 SCM plugins:
 
