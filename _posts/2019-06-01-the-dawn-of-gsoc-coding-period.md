@@ -199,7 +199,7 @@ Our team consists of:
 5. [Jeff](https://github.com/jeffpearce) (The mentor who helps with detailed code reviews)
 
 Honorable Mentions:
-6. [Oleg](https://github.com/oleg-nenashev) (The org admin who helped with all technical issues)
+6. [Oleg](https://github.com/oleg-nenashev) (The org admin who helps with all technical issues)
 7. [Greg](https://github.com/gmessner) (The creator of GitLab4J APIs)
 8. [Stephen](https://github.com/stephenc) (The backbone of all SCM related Plugins)
 
