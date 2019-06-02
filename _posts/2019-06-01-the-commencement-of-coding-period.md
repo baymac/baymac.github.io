@@ -189,7 +189,7 @@ I started using Debugger for the first time and it actually helped me single out
 2. Implement webhooks support, upgrade to latest gitlab-api-plugin
 3. Prepare documentation
 
-### Acknowledgements
+## Acknowledgements
 
 Our team consists of:
 1. [LinuxSuRen](https://github.com/LinuxSuRen) (The originator of this project idea)
