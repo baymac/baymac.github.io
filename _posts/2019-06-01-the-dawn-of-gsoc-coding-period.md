@@ -87,7 +87,7 @@ This is when the fun begins or maybe a little bit of stress because you have a r
 
 The coding work actually started a few days ahead as the design document, project workflow and other nit things were completed. I started writing code on May 23. My main motive of working on this plugin is to make it lightweight and make the code more readable. Also follow a general trend that is common with rest of SCM plugins. Most of the developers I interacted with suggested to take a look at `Gitea Plugin`. This plugin was developed recently like 2 years back and has a nice clean codebase. It is developed mostly from the contribution of one person `Stephen Connolly` so it had a more consistent coding style (that's my personal opinion). My work so far has been inspired from `Gitea Plugin` and `Github Plugin`. 
 
-I am learning a lot of cool stuffs by reading their codebases. I have made an experimental release that sports GitLab Server Configurations in Jenkins to authenticate Jenkins with the GitLab Server to communicate via REST APIs.
+I am learning a lot of cool stuffs by reading their codebases. I have made an experimental release that sports GitLab Server Configurations in Jenkins to authenticate Jenkins Server with the GitLab Server to communicate via REST APIs.
 
 You may take a look at the release [here](https://github.com/baymac/gitlab-branch-source-plugin/releases/tag/gitlab-branch-source-v0.0.1-SNAPSHOT) and test it. It lacks support for webhooks and a documentation right now. These updates will be pushed by the end of this week. 
 
