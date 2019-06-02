@@ -133,7 +133,7 @@ private interface GitLabServerPredicate {
 
 You can now pass a lambda at function call. In this case, `(serverUrl, gitLabServer) -> serverUrl.equals(gitLabServer.getServerUrl())`. In future if you want to pass a new lambda, you only need to define a new predicate interface and pass that predicate in the `removeServer(String, Predicate<>)` method. You will not have to mess inside the function code itself which is proven to be more error prone. If you are new to predicate it may look complex at first but when you start implementing yourself you get the hang of it.
 
-2) `Generating Personal Access Token from inside Jenkins` - This is a feature implemented by GitHub plugin. It lets you create personal access token to access your GitLab Server APIs without leaving Jenkins. You can use either text field to supply username/password to GitLab server or use the credentials plugin to persist username/password securely for future use. This feature is not inherently supported by GitLab APIs. These had to be implemented by doing some hack. Thankfully the GitLab4J APIs I am using had implemented it and all I had to do was just make a function call. 
+2) `Generating Personal Access Token from inside Jenkins` - This is a feature implemented by GitHub plugin. It lets you create personal access token to access your GitLab Server APIs without leaving Jenkins. You can use either text field to supply username/password to GitLab server or use the credentials plugin to persist username/password securely for future use. This feature is not inherently supported by GitLab APIs. These had to be implemented by doing some hacky stuff. Thankfully the GitLab4J APIs I am using had implemented it and all I had to do was make a function call. 
 
 ```java
 String tokenName = UUID.randomUUID().toString();
@@ -147,14 +147,14 @@ String token = AccessTokenUtils.createPersonalAccessToken(
 createCredentials(serverUrl, token, login, tokenName); // creates an id credentials of PersonalAccessToken type and persists in Jenkins
 ```
 
-At this point I realised why the previous plugin was a jumbled codebase, it is because they had to implement these functions inside the plugin itself. And they dic not abstract away these API calls.
+At this point I realised why the previous plugin was a jumbled codebase. The developers had to implement these complex functions inside the plugin itself. But it really makes sense to abstract away these API calls.
 
 ![gitlab-token-creator](/assets/2019-06-01-the-commencement-of-coding-period/gitlab-token-creator.png)
 `GitLab Personal Access Token Creator`
 
-3) `Use of groovy instead of jelly` - I preferred using `groovy` to write all the UI elements over `jelly`. This is because it felt more readable and groovy is a language that is highly flexible language and used in a lot of ways in Java development e.g. gradle, jenkinsfile etc. So I think this will be an opportunity to get started. Although it comes down to your personal preference.
+3) `Use of groovy instead of jelly` - I preferred using `groovy` to write all the UI elements over `jelly`. This is because it felt more readable and groovy is a language that is highly flexible language and used in many aspects of Java development e.g. gradle, jenkinsfile etc. So I think this will be an opportunity to get started. Although it comes down to your personal preference. To learn about the tags library, refer to this [guide](https://reports.jenkins.io/core-taglib/jelly-taglib-ref.html).
 
-4) `Detect only credentials that belongs our plugin` - This is a small bug that I discovered in Gitea Plugin. When the function calls the credentials plugin to fill the credentials items in the credentialsId list box, it passes a matcher for the authentication interface to find matches which leads to discovery other plugin's credentials implemented a similar interface. It should rather be pass a matcher to check if it is the credentials belong to our implementation class. 
+4) `Detect only credentials that belongs our plugin` - This is a small bug that I discovered in Gitea Plugin. When the function calls the credentials plugin to fill the credentials items in the credentialsId list box, it passes a matcher for the authentication interface to find matches which leads to discovery other plugin's credentials implemented a similar interface. It should rather pass a matcher to check if it is the credentials belong to the credentials implementation class in our plugin. 
 
 ```java
  public ListBoxModel doFillCredentialsIdItems(@QueryParameter String serverUrl, @QueryParameter String credentialsId) {
