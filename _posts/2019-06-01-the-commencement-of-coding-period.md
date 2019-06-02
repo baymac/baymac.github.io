@@ -175,13 +175,13 @@ At this point I realised why the previous plugin was a jumbled codebase, it is b
 
 ### Caveats
 
-I implemented a large part of the code without testing it and sent a pull request of almost 1200+ lines. This is a horrible style of coding. I sqaundered almost 3 entire days in search of one single bug. Trying all sorts of methods to see where it went wrong only to realise I missed an `@Extension` annotation over a `DescriptorImpl` method. :facepalms: It is a good idea to solve the problem in chunks, test it then implement the next part. This makes it easier to isolate bugs and also for mentors to review the code. Henceforth, I will follow a Test Driven Development (TDD) to find bugs at the compile time itself.
+I implemented a large part of the code without testing it and sent a pull request of almost 1200+ lines. This is a horrible style of coding which led to a loss of almost 3 entire days in search of one single bug. Trying all sorts of methods to see where it went wrong only to realise I missed an `@Extension` annotation over a `DescriptorImpl` method. :facepalms: It is a good idea to solve the problem in chunks, test it then implement the next part. This makes it easier to isolate bugs and also for mentors to review the code. Henceforth, I will follow a Test Driven Development (TDD) to find bugs at the compile time itself.
 
 ### Tools to aid development
 
 If you have tried `JShell` then you might already know how much handy it can be in writing Java codes. It lets you define simple functions and run. It can be great for debugging. If using IntelliJ, you will find it under `Tools` menu. It also requires JDK 9+.
 
-I started using Debugger for the first time and it actually helped me single out the bug in the code that caused me a lot of pain. A shout out to Justin, who actually introduced me to it.
+I started using Debugger for the first time and it actually helped me single out the bug in the code. A shout out to Justin, who introduced me to it.
 
 ### Work for this week
 
