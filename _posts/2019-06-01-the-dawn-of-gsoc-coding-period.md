@@ -49,9 +49,9 @@ So, I wanted to implement a Java API for GitLab or maybe extend one. But that wo
 
 4. Implements some utils that are not part of GitLab API inherently e.g. creating `Personal Access Token` from Username/Password credentials.
 
-This is the benefit of Open source that you get to reuse the work of others. So wrapping that API was fairly simple. Although we faced some problems with Maven because there were some dependencies that were targeting Java 9 and our Java level in Maven was set to Java 8. For this reason, `Maven Enforcer Plugin` caused an error during builds. After having discussions with Mentors and GitLab API owner, we decided to skip this enforcing check. If you find something like `Found Banned Dependency` error during the compilation of plugin then you might be interested to look at `gitlab-api` [POM](https://github.com/jenkinsci/gitlab-api-plugin/blob/master/pom.xml)
+This is the benefit of Open source that you get to reuse the work of others. So wrapping that API was fairly simple. Although we faced some problems with Maven because there were some dependencies that were targeting Java 9 and our Java level in Maven was set to Java 8. For this reason, `Maven Enforcer Plugin` caused an error during builds. After having discussions with Mentors and GitLab API owner, we decided to skip this enforcing check. If you find something like `Found Banned Dependency` error during the compilation of plugin then you might be interested to look at `gitlab-api` [POM](https://github.com/jenkinsci/gitlab-api-plugin/blob/master/pom.xml).
 
-#### Releasing the Plugin
+#### Releasing the GitLab API Plugin
 
 On April 25, The plugin reached it's releasable state. After preparing a Wiki [page](https://wiki.jenkins.io/display/JENKINS/GitLab+API+Plugin), creating a JIRA [issue](https://issues.jenkins-ci.org/browse/HOSTING-751) under `HOSTING` project and sending a [pull request](https://github.com/jenkins-infra/repository-permissions-updater/pull/1128) to request persmission to host plugin in [jenkinsci](https://github.com/jenkinsci/) github organisation.
 
