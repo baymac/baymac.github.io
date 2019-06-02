@@ -83,11 +83,11 @@ Mostly everthing was covered sans a few things that could only be realised after
 
 ## Coding Phase 1
 
-On May 27, the coding period started. This is where the fun begins or maybe a little bit of stress because you have a responsibility of pushing stable codes. The plan for this phase is to implement the `GitLab Branch Source Plugin`. This plugin will handle the pipeline builds for multiple branches. The current version of `GitLab Plugin` has a few problems and it does not fully support multibranch pipeline. If you want to know more about the project you may want to look at our project decription [page](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline/).
+This is when the fun begins or maybe a little bit of stress because you have a responsibility of pushing stable codes. The plan for this phase is to implement the `GitLab Branch Source Plugin`. This plugin will handle the pipeline builds for multiple branches. The current version of `GitLab Plugin` has a few problems and it does not fully support multibranch pipeline. If you want to know more about the project you may want to look at our project decription [page](https://jenkins.io/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline/).
 
-The coding work actually started a few days ahead as the design document, project workflow and other nit things were completed. I started writing code on May 23. My main motive of working on this plugin is to make it lightweight and make the code more readable. Also follow a general trend that is common with rest of SCM plugins. Most of the developers I interacted with suggested to take a look at `Gitea Plugin`. This plugin was developed recently like 2 years back and has a nice clean codebase. It is developed mostly from the contribution of one person `Stephen Connolly` so it had a more consistent coding style. My work so far has been inspired from `Gitea Plugin` and `Github Plugin`. 
+The coding work actually started a few days ahead as the design document, project workflow and other nit things were completed. I started writing code on May 23. My main motive of working on this plugin is to make it lightweight and make the code more readable. Also follow a general trend that is common with rest of SCM plugins. Most of the developers I interacted with suggested to take a look at `Gitea Plugin`. This plugin was developed recently like 2 years back and has a nice clean codebase. It is developed mostly from the contribution of one person `Stephen Connolly` so it had a more consistent coding style (that's my personal opinion). My work so far has been inspired from `Gitea Plugin` and `Github Plugin`. 
 
-I am learning a lot of cool stuffs by reading their codebases. I have made an experimental release of GitLab Server Configurations in Jenkins that basically authenticates Jenkins with the GitLab Server to communicate via REST APIs.
+I am learning a lot of cool stuffs by reading their codebases. I have made an experimental release that sports GitLab Server Configurations in Jenkins to authenticate Jenkins with the GitLab Server to communicate via REST APIs.
 
 You may take a look at the release [here](https://github.com/baymac/gitlab-branch-source-plugin/releases/tag/gitlab-branch-source-v0.0.1-SNAPSHOT) and test it. It lacks support for webhooks and a documentation right now. These updates will be pushed by the end of this week. 
 
@@ -152,7 +152,7 @@ At this point I realised why the previous plugin was a jumbled codebase, it is b
 ![gitlab-token-creator](/assets/2019-06-01-the-commencement-of-coding-period/gitlab-token-creator.png)
 `GitLab Personal Access Token Creator`
 
-3) `Use of groovy instead of jelly` - I preferred using `groovy` to write all the UI elements over `jelly`. This is because it felt more readable and groovy is a language that is also used in many other fields in Java development so I will get a chance to learn about it. Although it comes down to your personal preference.
+3) `Use of groovy instead of jelly` - I preferred using `groovy` to write all the UI elements over `jelly`. This is because it felt more readable and groovy is a language that is highly flexible language and used in a lot of ways in Java development e.g. gradle, jenkinsfile etc. So I think this will be an opportunity to get started. Although it comes down to your personal preference.
 
 4) `Detect only credentials that belongs our plugin` - This is a small bug that I discovered in Gitea Plugin. When the function calls the credentials plugin to fill the credentials items in the credentialsId list box, it passes a matcher for the authentication interface to find matches which leads to discovery other plugin's credentials implemented a similar interface. It should rather be pass a matcher to check if it is the credentials belong to our implementation class. 
 
@@ -173,12 +173,31 @@ At this point I realised why the previous plugin was a jumbled codebase, it is b
 }
 ```
 
-### Lesson
+### Caveats
 
-I implemented a large part of the code without testing it. I sent a pull request of almost 1200+ lines. This is a horrible style of coding. I sqaundered almost 3 entire days in search of one single bug. Trying all sorts of methods to see where it went wrong only to realise I missed an `@Extension` annotation over a `DescriptorImpl` method. :facepalms: It is a good idea to solve the problem in chunks, test it then implement the next part. This makes it easier to isolate bugs and also for mentors to review the code. It is a good idea to follow a Test Driven Development(TDD) to find bugs at the compile time itself.
+I implemented a large part of the code without testing it and sent a pull request of almost 1200+ lines. This is a horrible style of coding. I sqaundered almost 3 entire days in search of one single bug. Trying all sorts of methods to see where it went wrong only to realise I missed an `@Extension` annotation over a `DescriptorImpl` method. :facepalms: It is a good idea to solve the problem in chunks, test it then implement the next part. This makes it easier to isolate bugs and also for mentors to review the code. Henceforth, I will follow a Test Driven Development (TDD) to find bugs at the compile time itself.
+
+### Tools to aid development
+
+If you have tried `JShell` then you might already know how much handy it can be in writing Java codes. It lets you define simple functions and run. It can be great for debugging. If using IntelliJ, you will find it under `Tools` menu. It also requires JDK 9+.
+
+I started using Debugger for the first time and it actually helped me single out the bug in the code that caused me a lot of pain. A shout out to Justin, who actually introduced me to it.
 
 ### Work for this week
 
 1. Prepare presentation of last week's work
 2. Implement webhooks support, upgrade to latest gitlab-api-plugin
 3. Prepare documentation
+
+### Acknowledgements
+
+1. [LinuxSuRen](https://github.com/LinuxSuRen) (The originator of this project idea)
+2. [Marky](https://github.com/markyjackson-taulia) (The org admin who manages our project meetings to code reviews)
+3. [Joseph](https://github.com/casz) (The chief code reviewer)
+4. [Justin](https://github.com/justinharringa) (The mentor who helps with tech)
+5. [Jeff](https://github.com/jeffpearce) (The mentor who helps with detailed code reviews)
+6. [Oleg](https://github.com/oleg-nenashev) (The org admin who makes Jenkins feel like a family)
+7. [Greg](https://github.com/gmessner) (The creator of GitLab4J APIs)
+8. [Stephen](https://github.com/stephenc) (The backbone of all SCM related Plugins)
+
+Also thanks to people who have helped me Jesse, Robert, Matt, Ullrich, Martin, Gavin.
