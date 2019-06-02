@@ -149,7 +149,7 @@ createCredentials(serverUrl, token, login, tokenName); // creates an id credenti
 
 At this point I realised why the previous plugin was a jumbled codebase. The developers had to implement these complex functions inside the plugin itself. But it really makes sense to abstract away these API calls.
 
-![gitlab-token-creator](/assets/2019-06-01-the-commencement-of-coding-period/gitlab-token-creator.png)
+![gitlab-token-creator](/assets/2019-06-01-the-dawn-of-gsoc-coding-period/gitlab-token-creator.png)
 `GitLab Personal Access Token Creator`
 
 3) `Use of groovy instead of jelly` - I preferred using `groovy` to write all the UI elements over `jelly`. This is because it felt more readable and groovy is a language that is highly flexible language and used in many aspects of Java development e.g. gradle, jenkinsfile etc. So I think this will be an opportunity to get started. Although it comes down to your personal preference. To learn about the tags library, refer to this [guide](https://reports.jenkins.io/core-taglib/jelly-taglib-ref.html).
