@@ -7,7 +7,7 @@ summary:    "Talks about the kind of work we do at GSoC and some project specifi
 categories: jenkins gsoc java maven
 ---
 
-On Monday, May 27, the Google Summer of Code 2019 Coding Period started. Our team had been regularly doing sync ups to plan how to carry out the project successfully in the next 3 months. We do 2 meetings each week that motivates me to keep working throughout the week. The project workflow had been agreed upon. Jenkins community is immune to outside noise and everyone is very professional. It has been an exciting month since this is my first Google Summer of Code. I had fairly less experience in `Java` or `Object Oriented Design` per se but I wanted a new challenge. I have been following a few Java books and they have helped me be better at Java:
+On Monday, May 27, the Google Summer of Code 2019 Coding Period started. Our team had been regularly doing sync ups to plan how to carry out the project successfully in the next 3 months. The project workflow had been agreed upon. It has been an exciting month since this is my first Google Summer of Code. I had fairly less experience in `Java` or `Object Oriented Design` per se but I wanted a new challenge. I have been following a few Java books and they have helped me be better at Java:
 
 1. `Java 8 in Action` by Raoul, Mario and Alan
 2. `Core Java for Impatient` by Cay S. Horstmann
