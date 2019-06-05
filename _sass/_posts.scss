@@ -4,9 +4,9 @@
   margin-bottom: 1.5em;
   // border-bottom: thin solid $my-blue;
   padding: 1rem;
-  border: thin solid $dark-gray;
+  border: thin solid $light-gray;
   border-radius: 5px;
-  box-shadow: $dark-gray 1px 1px 1px, $dark-gray 1px 1px 1px;
+  box-shadow: $dark-gray 0px -0px 10px, $dark-gray 0px -0px 10px;
   transition: all 0.5s ease;
 }
 
