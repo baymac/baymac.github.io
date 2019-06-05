@@ -5,13 +5,12 @@ permalink: /about/
 tags: about
 ---
 
-* An electronics engineer who loves to code.
+I am fascinated by programming languages and their different ways of solving different problems. I sometimes spend sleepless nights over bugs otherwise I am an early bird. I am a big time fan of
 
-* A blockchain enthusiast and a open source contributor.
+* football (Argentina NT, Barcelona FC and Lionel Messi), 
+* movies (LoTR, GoT, Star wars, Avengers, Quentin Tarantino, Clint Eastwood, Robert De Niro etc) and 
+* music (Metallica, Queen, Pink Floyd, Eagles, ACDC, GnR). 
 
-* A lover of FC Barcelona and Lionel Messi. 
-
-* Often listening to music, playing football, reading books.
 
 <!-- This blog is using Jekyll theme, created by [John Otander](http://johnotander.com)
 ([@4lpine](https://twitter.com/4lpine)).  
