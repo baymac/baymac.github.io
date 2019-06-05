@@ -43,12 +43,12 @@
 
 .button-disabled {
   opacity: 0.55;
-  background-color: #999;
+  background-color: rgb(54, 50, 50);
 }
 
 .button-disabled:hover,
 .button-disabled:active,
 .button-disabled:focus {
   cursor: not-allowed;
-  background-color: #999;
+  background-color: rgb(54, 50, 50);
 }

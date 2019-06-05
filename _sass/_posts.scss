@@ -3,9 +3,9 @@
 .posts .post {
   margin-bottom: 1.5em;
   padding: 1rem;
-  // border: 0.03rem solid white;
-  border-radius: 5px;
-  box-shadow: $my-blue 0px 0px 5px;
+  border: 0.03rem solid $dark-gray;
+  border-radius: 2px;
+  box-shadow: $dark-gray 0px 0px 5px;
   transition: all 0.5s ease;
 }
 
@@ -58,8 +58,6 @@
   color: #fff; // this is page date and read minutes colors
   font-style: italic;
 }
-
-
 
 .post-meta {
   margin-top: -0.5rem;
