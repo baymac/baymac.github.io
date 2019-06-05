@@ -1,10 +1,17 @@
 
 
 .posts .post {
-  margin-bottom: 0.75em;
-  border-bottom: thin solid $my-blue;
-  // padding: 1rem;
-  // border: thin solid $my-blue;
+  margin-bottom: 1.5em;
+  // border-bottom: thin solid $my-blue;
+  padding: 1rem;
+  border: thin solid $dark-gray;
+  border-radius: 5px;
+  box-shadow: $dark-gray 1px 1px 1px, $dark-gray 1px 1px 1px;
+  transition: all 0.5s ease;
+}
+
+.post-link:hover{
+  transform: translate3D(0, -1px, 0) scale(1.02);
 }
 
 // .post {
@@ -14,15 +21,15 @@
 // }
 
 .posts {
-  margin: 0%;
+  margin-bottom: 0%;
   padding: 0%;
 }
 
-.posts .post:last-child {
-  border-bottom: none;
-  margin-bottom: .375em;
-  padding-bottom: 0;
-}
+// .posts .post:last-child {
+//   border-bottom: none;
+//   margin-bottom: .375em;
+//   padding-bottom: 0;
+// }
 
 .post-link .post-title {
   margin-top: 0;
@@ -63,6 +70,7 @@
 
 .blog-title {
   margin-bottom: 0%;
+  margin-top: 70px;
   padding-bottom: 0%;
 }
 

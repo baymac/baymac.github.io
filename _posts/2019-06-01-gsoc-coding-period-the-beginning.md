@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "The dawn of GSoC coding period"
+title:      "GSoC coding period: The beginning"
 date:       2019-06-01 17:10:00
-summary:    "Talks about the kind of work we do at GSoC and some project specific details"
+summary:    "Details about the kind of work we do at GSoC and some project specific details."
 
 categories: jenkins gsoc java maven
 ---

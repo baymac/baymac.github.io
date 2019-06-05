@@ -6,15 +6,17 @@ layout: default
 <div class="home">
   {% if posts_count > 0 %}
     <div class="posts">
+      
       {% for post in paginator.posts %}
         {% if post.draft != true %}
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
           <div class="post py3">
               {% assign post_minutes = post.content | strip_html | number_of_words | divided_by: 180 %}
               {% if post_minutes == 0 %}
               {% assign post_minutes = 1 %}
               {% endif %}
         
-            <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h2 post-title">{{ post.title }}</h3></a>
+            <h3 class="h2 post-title">{{ post.title }}</h3>
             <p class="post-meta">{{ post.date | date: site.date_format }} <span class="pull-right">{{ post_minutes }} {{ site.text.post.minute_read }}</span></p>
             <p class="post-summary">
               {% if post.summary %}
@@ -30,8 +32,10 @@ layout: default
               {% endfor %}
             </ul>
           </div>
+        </a>
         {% endif %}
       {% endfor %}
+      
     </div>
 
     {% include pagination.html %}
