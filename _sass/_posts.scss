@@ -2,16 +2,11 @@
 
 .posts .post {
   margin-bottom: 1.5em;
-  // border-bottom: thin solid $my-blue;
   padding: 1rem;
-  border: thin solid $light-gray;
+  // border: 0.03rem solid white;
   border-radius: 5px;
-  box-shadow: $dark-gray 0px -0px 10px, $dark-gray 0px -0px 10px;
+  box-shadow: $my-blue 0px 0px 5px;
   transition: all 0.5s ease;
-}
-
-.post-link:hover{
-  transform: translate3D(0, -1px, 0) scale(1.02);
 }
 
 // .post {
@@ -23,6 +18,10 @@
 .posts {
   margin-bottom: 0%;
   padding: 0%;
+}
+
+.py3 {
+  background: #121212;
 }
 
 // .posts .post:last-child {
