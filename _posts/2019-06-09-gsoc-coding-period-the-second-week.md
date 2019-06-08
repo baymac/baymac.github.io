@@ -27,6 +27,7 @@ This fix was made in order to keep Data Bound Construtor to have minimal paramet
 
 Added Simple Logging Facade for Java (SLF4J) logging for debugging. To enable debug logging in the plugin: 
 
+```
 i) Go to Jenkins -> Manage Jenkins -> System Log
 
 ii) Add new log recorder
@@ -35,8 +36,8 @@ iii) Enter your desired name
 
 iv) On the next page, enter 'io.jenkins.plugins.gitlabserver' for Logger, set log level to FINEST, and save
 
-vi) Then click on your log, click 'Clear this log' if necessary, and then use GitLab to trigger some actions
-Refresh the log page and you should see output.
+vi) After performing GitLab server configuration, you should see output in the log page.
+```
 
 |  Issue 	|   Pull Request	| 
 |---	    |---	            |
