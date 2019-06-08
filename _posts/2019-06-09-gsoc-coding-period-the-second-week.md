@@ -18,11 +18,13 @@ Monday and Tuesday were ineffective days due to my personal reasons. Work starte
 This fix was made in order to keep Data Bound Construtor to have minimal parameters. In future, if there was a need to change of signature, there will be unlikely a binary incompatibility issue. So we decided to only use `serverUrl` as the mandatory parameter and set it is as `final` variable. Later, `name` field was also moved into the Data Bound Constructor since `name` was marked `@NonNull` SpotBugs wants it to be instanied by constructor as well. 
 
 [JIRA](https://issues.jenkins-ci.org/browse/JENKINS-57894)
+
 [PR](https://github.com/baymac/gitlab-branch-source-plugin/pull/8)
 
 2. Add Loggers to GitLabServer and GitLabServers class
 
 [JIRA](https://issues.jenkins-ci.org/browse/JENKINS-57900)
+
 [PR](https://github.com/baymac/gitlab-branch-source-plugin/pull/10)
 
 3. Remove synchronisation from GitLabServers methods
@@ -30,6 +32,7 @@ This fix was made in order to keep Data Bound Construtor to have minimal paramet
 GitLabServers methods `addServer`, `removeServer` etc were synchronized. As Jeff pointed out, there could be a race condition would be two admins making changes to the config at the same time. Justin pointed out that synchronistaion cause performance bottlenecks or, worse, deadlocks. We decided there isn't an urgent requirement of synchronisation and remove it unless there seems to be a need for it. 
 
 [JIRA](https://issues.jenkins-ci.org/browse/JENKINS-57892)
+
 [PR](https://github.com/baymac/gitlab-branch-source-plugin/pull/9)
 
 4. Provide a unique name for GitLab Server configuration
@@ -46,6 +49,7 @@ private String getRandomName() {
 Generates names like gitlab-4531, gitlab-7632, gitlab-8343 etc.
 
 [JIRA](https://issues.jenkins-ci.org/browse/JENKINS-57880)
+
 [PR](https://github.com/baymac/gitlab-branch-source-plugin/pull/5)
 
 5. Upgrade to new API plugin release 1.0.2
@@ -75,6 +79,7 @@ private static final List<AccessTokenUtils.Scope> GL_PLUGIN_REQUIRED_SCOPE = Imm
 Now the `createToken` method from `AccessTokenUtils` take a list of `Scope` enum instead of a list of `String`.
 
 [JIRA](https://issues.jenkins-ci.org/browse/JENKINS-57850)
+
 [PR](https://github.com/baymac/gitlab-branch-source-plugin/pull/2)
 
 6. Remove client api model classes
@@ -82,6 +87,7 @@ Now the `createToken` method from `AccessTokenUtils` take a list of `Scope` enum
 There were some model classes defined initially to store Username/password or Personal Access Token as objects. But since we depend on an API Plugin these classes were not required. We can directly class from Credentials Plugin classes such as `StandardUsernamePasswordCredentials` or our `PersonalAccessTokenImpl` class to pass a matcher or a pass the credentials itself.
 
 [JIRA](https://issues.jenkins-ci.org/browse/JENKINS-57884)
+
 [PR](https://github.com/baymac/gitlab-branch-source-plugin/pull/6/)
 
 7. Repackaging to separate GitLabServer and GitLabBranchSource codebase
@@ -89,6 +95,7 @@ There were some model classes defined initially to store Username/password or Pe
 The server codebase was repackaged into `gitlabserver` package name. And branch source fucntionality will be packaged into `gitlabbranchsource`. If in future we decide to take out this plugin then it would be easier to do it when we have separated codebases.
 
 [JIRA](https://issues.jenkins-ci.org/browse/JENKINS-57853)
+
 [PR](https://github.com/baymac/gitlab-branch-source-plugin/pull/3)
 
 8. Fix delete server configuration code:
@@ -115,6 +122,7 @@ public boolean configure(StaplerRequest req, JSONObject json) throws FormExcepti
 The user wasn't able to delete a server from configuration when only one configuration persisted in Jenkins. I didn't had time to find the exact cause, I will debug later to see what caused this. But this issue was solved with the above code changes.
 
 [JIRA](https://issues.jenkins-ci.org/browse/JENKINS-57751)
+
 [PR](https://github.com/baymac/gitlab-branch-source-plugin/pull/4)
 
 9. Adding JCasC support and CI
@@ -124,6 +132,7 @@ This PR was sent by Joseph who initially suggested we can add support JCasC in o
 The PR also consisted of a basic travis `yaml` file to build our plugin. And some other refractories that either served compatability with JCasC or removed deprecated codes.
 
 [JIRA](https://issues.jenkins-ci.org/browse/JENKINS-57886)
+
 [PR](https://github.com/baymac/gitlab-branch-source-plugin/pull/7)
 
 ### Issues Unsovled:
