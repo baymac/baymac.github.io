@@ -4,7 +4,7 @@ title:      "GSoC coding period: The beginning"
 date:       2019-06-01 17:10:00
 summary:    "Details about the kind of work we do at GSoC and some project specific details."
 
-categories: jenkins gsoc java maven
+categories: jenkins gsoc java gitlab
 ---
 
 On Monday, May 27, the Google Summer of Code 2019 Coding Period started. Our team had been regularly doing sync ups to plan how to carry out the project successfully in the next 3 months. The project workflow had been agreed upon. It has been an exciting month since this is my first Google Summer of Code. I had fairly less experience in `Java` or `Object Oriented Design` per se but I wanted a new challenge. I have been following a few Java books and they have helped me be better at Java:
