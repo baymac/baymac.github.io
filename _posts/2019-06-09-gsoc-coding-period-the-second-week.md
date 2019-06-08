@@ -7,9 +7,9 @@ summary:    "Details about the kind of work we do at GSoC and some project speci
 categories: jenkins gsoc jcasc gitlab
 ---
 
-This week contains summary of work done during the second week of GSoC Coding period from 3 - 8 June. There weren't any new releases. Most of the work was around fixing some important bugs and implementing JCasC support for our plugin.
+This post contains summary of work done during the second week of GSoC Coding period from 3rd - 8th June. Most of the work was around fixing some important bugs and implementing JCasC support for our plugin. No new releases were published. 
 
-Monday and Tuesday were ineffective days due to my personal reasons. Work started from Wednesday onwards,
+Monday and Tuesday were ineffective days due to my personal reasons. Work started Wednesday onwards.
 
 ### Fixed Issues:
 
