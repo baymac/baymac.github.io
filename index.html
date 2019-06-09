@@ -17,8 +17,9 @@ layout: default
               {% endif %}
         
               <p class="post-meta">{{ post.date | date: site.date_format }}</p>
-              <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-                <h3 class="post-title underline">{{ post.title }}</h3>
+                <h3 class="post-link">
+                  <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">{{ post.title }}</a>
+                </h3>
               </a>
           </div>
         </a>

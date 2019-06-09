@@ -8,9 +8,13 @@
 }
 
 .post-link .post-title {
-  margin-top: 0;
   font-weight: 550;
   color: #fff;
+}
+
+.post-link {
+  margin: 0%;
+  margin-bottom: 2rem;
 }
 
 .post-footer {
@@ -19,14 +23,28 @@
 }
 
 .post-footer .avatar {
-  // margin: 2rem 0;
   width: 100px;
   border-radius: 50%;
 }
 
-.underline {
-  box-shadow: inset 0 -0.10em #fff;
+.post-title {
+  border-bottom: 5px solid #fff;
+  color: #fff;
+  padding-bottom: .25em;
+  text-decoration: none;
 }
+
+.post-link {
+  line-height: 40px;
+}
+
+.post-link a:hover {
+  border-bottom: 5px solid $my-blue;
+  padding-bottom: .25em;
+  color: $my-blue;
+  text-decoration: none;
+}
+
 
 .meta,
 .post-meta {
@@ -38,7 +56,6 @@
 }
 
 .post-meta {
-  margin-bottom: 0.2rem;
   font-size: 0.7rem;
 }
 
