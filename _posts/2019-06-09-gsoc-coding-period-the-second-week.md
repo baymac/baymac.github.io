@@ -20,7 +20,7 @@ This fix was made in order to keep Data Bound Construtor to have minimal paramet
 
 |  Issue 	|   Pull Request	| 
 |---	    |---	            |
-| [JENKINS-57894](https://issues.jenkins-ci.org/browse/JENKINS-57894) | [#8](https://github.com/baymac/gitlab-branch-source-plugin/pull/8)	|   
+| [JENKINS-57894](https://issues.jenkins-ci.org/browse/JENKINS-57894) | [#8](https://github.com/baymac/gitlab-branch-source-plugin/pull/8)	|
 
 
 2) Add Loggers to GitLabServer and GitLabServers class
@@ -41,7 +41,7 @@ vi) After performing GitLab server configuration, you should see output in the l
 
 |  Issue 	|   Pull Request	| 
 |---	    |---	            |
-| [JENKINS-57900](https://issues.jenkins-ci.org/browse/JENKINS-57900) | [#10](https://github.com/baymac/gitlab-branch-source-plugin/pull/10)
+| [JENKINS-57900](https://issues.jenkins-ci.org/browse/JENKINS-57900) | [#10](https://github.com/baymac/gitlab-branch-source-plugin/pull/10)|
 
 3) Remove synchronisation from GitLabServers methods
 
