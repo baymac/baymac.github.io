@@ -1,11 +1,4 @@
-
-
 .posts .post {
-  margin-bottom: 1.5em;
-  padding: 1rem;
-  border: 0.03rem solid $dark-gray;
-  border-radius: 2px;
-  box-shadow: $dark-gray 0px 0px 5px;
   transition: all 0.5s ease;
 }
 
@@ -14,43 +7,56 @@
   padding: 0%;
 }
 
-.py3 {
-  background: #121212;
-}
-
 .post-link .post-title {
-  margin-top: 0;
   font-weight: 550;
   color: #fff;
 }
 
+.post-link {
+  margin: 0%;
+  margin-bottom: 2rem;
+}
+
 .post-footer {
   @extend .italic;
-
-  margin-top: .75rem;
   text-align: center;
 }
 
 .post-footer .avatar {
-  margin: 2rem 0;
   width: 100px;
   border-radius: 50%;
 }
+
+.post-title {
+  border-bottom: 5px solid #fff;
+  color: #fff;
+  padding-bottom: .25em;
+  text-decoration: none;
+}
+
+.post-link {
+  line-height: 40px;
+}
+
+.post-link a:hover {
+  border-bottom: 5px solid $my-blue;
+  padding-bottom: .25em;
+  color: $my-blue;
+  text-decoration: none;
+}
+
 
 .meta,
 .post-meta {
   width: auto;
   font-weight: 100;
   margin: 0;
-  padding: .25em 0;
   color: #fff; // this is page date and read minutes colors
   font-style: italic;
 }
 
 .post-meta {
-  margin-top: -0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 
 .blog-title {
