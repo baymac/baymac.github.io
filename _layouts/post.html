@@ -9,11 +9,11 @@ layout: default
 
 <div class="post-header mb2">
   <h1 class="blog-title">{{ page.title }}</h1>
-  <span class="post-meta">{{ page.date | date: site.date_format }}&#xa0;&#xa0;&#183;</span>
+  <span class="post-meta blog-meta">{{ page.date | date: site.date_format }}&#xa0;&#xa0;&#183;</span>
   {% if page.update_date %}
-    <span class="post-meta">{{ site.text.post.updated }}: {{ page.update_date | date: site.date_format }}&#xa0;&#xa0;&#183;</span>
+    <span class="post-meta blog-meta">{{ site.text.post.updated }}: {{ page.update_date | date: site.date_format }}&#xa0;&#xa0;&#183;</span>
   {% endif %}
-  <span class="post-meta small">
+  <span class="post-meta small blog-meta">
   {% if page.minutes %}
     {{ page.minutes }} {{ site.text.post.minute_read }}
   {% else %}

@@ -8,13 +8,12 @@
 }
 
 .post-link .post-title {
-  font-weight: 550;
-  color: #fff;
+  font-weight: 510;
 }
 
 .post-link {
   margin: 0%;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .post-footer {
@@ -28,35 +27,32 @@
 }
 
 .post-title {
-  border-bottom: 5px solid #fff;
-  color: #fff;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.76);
+  padding-bottom: .25em;
+  text-decoration: none;
+}
+
+
+.post-link a:hover {
+  border-bottom: 3px solid $my-blue;
   padding-bottom: .25em;
   text-decoration: none;
 }
 
 .post-link {
-  line-height: 40px;
+  line-height: 39px;
 }
-
-.post-link a:hover {
-  border-bottom: 5px solid $my-blue;
-  padding-bottom: .25em;
-  color: $my-blue;
-  text-decoration: none;
-}
-
 
 .meta,
 .post-meta {
   width: auto;
   font-weight: 100;
   margin: 0;
-  color: #fff; // this is page date and read minutes colors
-  font-style: italic;
+  color: rgba(255, 255, 255, 0.76); // this is page date and read minutes colors
 }
 
 .post-meta {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .blog-title {
@@ -67,4 +63,8 @@
 
 .related-post-title {
   border-bottom: thin solid #f3f3f3;
+}
+
+.blog-meta {
+  font-size: 0.7rem;
 }
