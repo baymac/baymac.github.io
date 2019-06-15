@@ -161,6 +161,7 @@ I had been handling git poorly e.g. adding commits for small changes, taking out
 So when the first PR was made from `add-validation` branch, here's what the history looked like:
 
 ![bad-git-history](/assets/2019-06-15-gsoc-coding-period-the-mock-presentation-week/bad-git-history.png)
+
 `Bad Git History`
 
 The `add-validation` branch was taken from `hash-servers` branch which was never merged. So there was no need for commits that would never be merged into `develop` branch. So we decided to drop those commits. So we rebased `add-validation` onto `develop`:
@@ -175,6 +176,7 @@ Rebasing `add-validation` onto `develop` solve all merge conflicts by picking al
 The result:
 
 ![good-git-history](/assets/2019-06-15-gsoc-coding-period-the-mock-presentation-week/good-git-history.png)
+
 `Good Git History`
 
 Now the git history for the `add-validation` PR merge looks linear. We dropped and squashed commits while rebasing `develop` onto `add-validation` and then a fast forward merge into `develop`.
