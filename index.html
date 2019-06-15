@@ -17,7 +17,7 @@ layout: default
               {% endif %}
         
                 <h3 class="post-link">
-                  <p class="post-meta">{{ post.date | date: site.date_format }}</p>
+                  <p class="post-meta">{{ post.date | date: site.date_format }}&#xa0;&#183;&#xa0;{{ post_minutes }} {{ site.text.post.minute_read }}</p>
                   <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">{{ post.title }}</a>
                 </h3>
               </a>
