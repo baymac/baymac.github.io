@@ -27,10 +27,11 @@
 }
 
 .post-title {
-  border-bottom: 3px solid rgba(255, 255, 255, 0.76);
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.76);
   padding-bottom: .25em;
   text-decoration: none;
   letter-spacing: 0.5px;
+  font-size: 1.20rem;
 }
 
 
@@ -53,8 +54,8 @@
 }
 
 .post-meta {
-  font-size: 0.8rem;
-  letter-spacing: 2px;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
 }
 
 .blog-title {
@@ -67,7 +68,3 @@
   border-bottom: thin solid #f3f3f3;
 }
 
-.blog-meta {
-  font-size: 0.7rem;
-  letter-spacing: 0.5px;
-}
