@@ -9,7 +9,7 @@ I am fascinated by programming languages and their different ways of solving dif
 
 * Football (Argentina NT, Barcelona FC and Lionel Messi), 
 * Movies (LoTR, GoT, Star wars, Avengers, The Social Network, Quentin Tarantino, Clint Eastwood, Robert De Niro etc) and 
-* 70s Rock bands (Metallica, Queen, Pink Floyd, Eagles, ACDC, GnR). 
+* 70s Rock bands (Metallica, Queen, Pink Floyd, Eagles, ACDC, GnR, Led Zeppelin, U2, Nirvana). 
 
 
 <!-- This blog is using Jekyll theme, created by [John Otander](http://johnotander.com)
