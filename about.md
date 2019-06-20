@@ -8,7 +8,7 @@ tags: about
 I am fascinated by programming languages and their different ways of solving different problems. I am a big time fan of
 
 * Football (Argentina NT, Barcelona FC and Lionel Messi), 
-* Movies (LoTR, GoT, Star wars, Avengers, Quentin Tarantino, Clint Eastwood, Robert De Niro etc) and 
+* Movies (LoTR, GoT, Star wars, Avengers, The Social Network, Quentin Tarantino, Clint Eastwood, Robert De Niro etc) and 
 * 70s Rock bands (Metallica, Queen, Pink Floyd, Eagles, ACDC, GnR). 
 
 
