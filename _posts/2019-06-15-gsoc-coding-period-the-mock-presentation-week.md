@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "GSoC coding period: The mock presentation week"
-date:       2019-06-14 08:34:00
+date:       2019-06-15 08:34:00
 summary:    "Details of work done in the third week including a mock presentation"
 
 categories: jenkins gsoc jcasc gitlab
