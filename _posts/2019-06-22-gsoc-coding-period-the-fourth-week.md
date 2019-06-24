@@ -13,7 +13,7 @@ This week work was to develop `Branch Source` part of the plugin. In Jenkins, <S
 
 2. `Branch API Plugin` - It contains extension points to implement the branching structure of your source control system in Jenkins. SCM projects(or repositories) can have multiple branches. They can decide which branches needs to be continuously integrated. To allow such multiple branch configuration `Branch API Plugin` has extension points such as `BranchBuildStrategy`, `BranchProjectFactory`, `BranchProperty` and more. You can see the extension points [here](https://jenkins.io/doc/developer/extensions/branch-api/). They also a proper documentation available [here](https://github.com/jenkinsci/branch-api-plugin/tree/master/docs).
 
-3. `Git Plugin` - There are multiple SCMs that are based on Git e.g. GitHub, GitLab, Gitea etc. So there is a lot of commonality that is implemented by Git Plugin which is then extended by SCM specific plugins. But so far I haven't been able to leverage this plugin that much in my plugin. Used in `GitLabSCMBuilder`, `GitLabBrowser` etc. There is actually a lot of common codes between both Git Plugin and GitLab Branch Source Plugin.
+3. `Git Plugin` - There are multiple SCMs that are based on Git e.g. GitHub, GitLab, Gitea etc. So there is a lot of commonality that is implemented by Git Plugin which is then extended by SCM specific plugins. Used in `GitLabSCMBuilder`, `GitLabBrowser` etc. There is actually a lot of common codes between both Git Plugin and GitLab Branch Source Plugin.
 
 The list of `packages/classes/enums` implemented this week it's associated issues and takeaways:
 
