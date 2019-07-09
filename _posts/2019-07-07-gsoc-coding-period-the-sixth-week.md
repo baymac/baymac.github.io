@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "GSoC coding period: The sixth week"
-date:       2019-06-29 07:11:00
+date:       2019-07-07 07:11:00
 summary:    "Details of work done in the sixth week on GitLab Branch Source"
 
 categories: jenkins gsoc gitlab
