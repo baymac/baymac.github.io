@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "GSoC coding period: The plugin hosting week"
-date:       2019-07-12 07:43:00
+date:       2019-07-13 07:43:00
 summary:    "Details of work done in the seventh week on GitLab Branch Source"
 
 categories: jenkins gsoc gitlab
@@ -16,6 +16,8 @@ This week the branch source part of the plugin has taken some shape, a few more 
 To initiate the process to move our plugin into `jenkinsci` org, I raised a ticket. There is a conflict due existence of another plugin with the same name but we are expecting it to be fixed as the old plugin is not maintained and also not released to Jenkins update centre.
 
 On Friday, our plugin got hosted in the `jenkinsci` organisation. I am hoping to fix a couple of issues and making my first release on Monday.
+
+The official `GitLab-Branch-Source-Plugin` repository can be found [here](https://github.com/jenkinsci/gitlab-branch-source-plugin/).
 
 |  Issue 	|
 |---	    |
