@@ -228,7 +228,7 @@ git checkout master
 
 git merge <tag-name>
 
-git push orgin master
+git push origin master
 
 git push origin --tags
 
