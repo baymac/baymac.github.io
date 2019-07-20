@@ -65,3 +65,152 @@ Currently the deploy stage fails as the archives cannot be deployed incrementall
 |  Issue 	|   Pull Request	| 
 |---	    |---	            |
 |[JENKINS-58510](https://issues.jenkins-ci.org/browse/JENKINS-58510), [INFRA-2183](https://issues.jenkins-ci.org/browse/INFRA-2183) | [#1](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/1)
+
+3) Suggestion by Justin on GitLab Pipeline Status Reporting
+
+Justin suggested we can give user the option to get the Pipeline Stages status to GitLab or only the Job status. This is a planned feature and I will implement this soon. Presently the Job Status Reporting has been improved. Previously there were multiple entries for different jobs. Now the Job Names are moved into description. The names of the pipeline entries are now based on branch heads such as `jenkinsci/branch`, `jenkinsci/mr`, `jenkinsci/tag`.
+
+![job-status-1](/assets/2019-07-20-gsoc-coding-period-plugin-release-week/job-status-1.png)
+
+![job-status-2](/assets/2019-07-20-gsoc-coding-period-plugin-release-week/job-status-2.png)
+
+|  Issue 	|   Pull Request	| 
+|---	    |---	            |
+|[JENKINS-58525](https://issues.jenkins-ci.org/browse/JENKINS-58525) | [#3](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/3)
+
+
+4) Readded missing icons for heads
+
+Due to sending fix for the CI build issue, I removed the icons are readded a different set of icons and some icons were missing. We required a the missing icons that would be a part of various actions in our plugin. Added 3 more icons `mr`, `tag` and `commit`.
+
+![icon-branch](/assets/2019-07-20-gsoc-coding-period-plugin-release-week/icon-branch.png)
+
+![icon-tag](/assets/2019-07-20-gsoc-coding-period-plugin-release-week/icon-tag.png)
+
+|  Issue 	|   Pull Request	| 
+|---	    |---	            |
+|[JENKINS-58526](https://issues.jenkins-ci.org/browse/JENKINS-58526) | [#4](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/4)
+
+5) Fix for SSH checkout of project(s)
+
+SSH checkout had a bug as the uri scheme that was used to dissect the ssh remote url gave NPE. In order to fix it moved to a simpler implementation of getting the sshRemote.
+
+```java
+public static UriTemplate checkoutUriTemplate(@CheckForNull Item context,
+                                                  @NonNull String serverUrl,
+                                                  @CheckForNull String sshRemote,
+                                                  @CheckForNull String credentialsId,
+                                                  @NonNull String projectPath) {
+
+        if (credentialsId != null && sshRemote != null) {
+            URIRequirementBuilder builder = URIRequirementBuilder.create();
+            URI serverUri = URI.create(serverUrl);
+            if (serverUri.getHost() != null) {
+                builder.withHostname(serverUri.getHost());
+            }
+            StandardUsernameCredentials credentials = CredentialsMatchers.firstOrNull(
+                    CredentialsProvider.lookupCredentials(
+                            StandardUsernameCredentials.class,
+                            context,
+                            context instanceof Queue.Task
+                                    ? Tasks.getDefaultAuthenticationOf((Queue.Task) context)
+                                    : ACL.SYSTEM,
+                            builder.build()
+                    ),
+                    CredentialsMatchers.allOf(
+                            CredentialsMatchers.withId(credentialsId),
+                            CredentialsMatchers.instanceOf(StandardUsernameCredentials.class)
+                    )
+            );
+            if (credentials instanceof SSHUserPrivateKey) {
+                return UriTemplate.buildFromTemplate("ssh://" + sshRemote)
+                        .build();
+            }
+        }
+        return UriTemplate.buildFromTemplate(serverUrl+'/'+projectPath)
+                .literal(".git")
+                .build();
+    }
+```
+
+`sshRemote` is populated at the time of `retrieve(c, o, e, l)` method in `GitLabSCMSource`.
+
+Also added `checkout credentials` in the Job creation UI instead of `credentials`.
+
+This issue was reported by Justin and fixed by me.
+
+|  Issue 	|   Pull Request	| 
+|---	    |---	            |
+|[JENKINS-58531](https://issues.jenkins-ci.org/browse/JENKINS-58531) | [#6](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/6)
+
+6) Added Skip Notification in the plugin itself
+
+`Skip Notification` is a trait which can be selected at the time of job creation. With this trait the GitLab Server will not be notified about the build status. There is a plugin called `Skip Notifcation Trait Plugin` which provides the trait for `BitBucket Branch Source Plugin`. Initially the plan was to extend `Skip Notification Trait Plugin` to add support for our plugin. But I felt it wasn't worth to reside in a different plugin as the `Skip Notification Trait Plugin` had only 270 installs in over a year time. So I decided to implement it inside our plugin itself.
+
+|  Issue 	|   Pull Request	| 
+|---	    |---	            |
+|[JENKINS-58480](https://issues.jenkins-ci.org/browse/JENKINS-58480) | [#8](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/8)
+
+7) Reduced API calls in fetch owner
+
+I had implemented some messed up code in `GitLabSCMNavigator`. The `retrieveActions` method had to fetch the owner based on the `projectOwner` provided by user. Joseph noted that multiple API calls are being made to fetch the same details of the owner like `fullName`, `web_url` etc. So he implemented Model classes for `GitLabUser` and `GitLabGroup` which stored the necessary details. It helped me learn about Object Oriented Programming more. Due to this fix the `GitLab Group` job type now performs faster. 
+
+|  Issue 	|   Pull Request	| 
+|---	    |---	            |
+|[JENKINS-58535](https://issues.jenkins-ci.org/browse/JENKINS-58535) | [#7](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/7)
+
+8) Added GitLab4J groupfilter to include subgroups
+
+This fix was again made by Joseph as he would suggested we can provide option to include a trait that allows `subgroup` projects to be included.
+
+|  Issue 	|   Pull Request	| 
+|---	    |---	            |
+|[#409](https://github.com/gitlab4j/gitlab4j-api/issues/409) | [#410](https://github.com/gitlab4j/gitlab4j-api/pull/410)
+
+9) Added Jenkins interface to receive POST request from GitLab Server
+
+The webhooks support is yet to be completely implemented. Some progress has been made with the implementation of `GitLabWebhookAction` which processes the HTTP request received from the GitLab Server where the webhook is created upon job creation.
+
+![post-request](/assets/2019-07-20-gsoc-coding-period-plugin-release-week/post-request.png)
+`Request received by Jenkins`
+
+![webhook-execution](/assets/2019-07-20-gsoc-coding-period-plugin-release-week/webhook-execution.png)
+`GitLab Server says the test request was successfully executed`
+
+Also added implementation of `WebhookRegistrationTrait` that helps you override the default webhook management and choose if you want to use a different context (say Item) or disable it altogether.
+
+See [1fef8766](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/2/commits/1fef8766c0a82ebc06224ff6d29a966567e3f967).
+
+See [acc83f96](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/2/commits/acc83f96a60dcec7f549f284dc13d5722c6ffe71).
+
+
+## Other work:
+
+Justin will be taking a closer look at [#5](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/5) to see if he can find some cue to fix it.
+
+A new release of `GitLab API Plugin` was made this week which can be found [here](https://github.com/jenkinsci/gitlab-api-plugin/releases/tag/gitlab-api-1.0.3).
+
+Mock Presentation for second coding phase will be on 22nd July, Monday at about 4:00 pm UTC. 
+
+A top-level look at the presentation:
+
+* 15 mins in total
+    * Recap what was done in the 1st eval (2-3 mins)
+    * Touch new added since the 1st eval (2-3 slides) (2-3 mins)
+    * Light demo (5-8 mins)
+
+## Pending Work:
+
+1. Complete Web Hook feature implementation
+
+2. All the remaining bugs are optional before the 2nd phase evaluation on 23rd
+
+3. Prepare presentation
+
+4. Send PR to update the project page
+
+5. Write blog for `jenkins.io`
+
+6. Update repository documentation
+
+7. Release plugin to update center
