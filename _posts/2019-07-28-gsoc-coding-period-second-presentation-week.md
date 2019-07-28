@@ -38,9 +38,14 @@ for (Iterator<SCMTraitDescriptor<?>> iterator = all.iterator(); iterator.hasNext
     }
 }
 ```
+
+![casz-error](/assets/2019-07-28-gsoc-coding-period-second-presentation-week/casz-error.png)
+
+![casz-error-expanded](/assets/2019-07-28-gsoc-coding-period-second-presentation-week/casz-error-expanded.png)
+
 |  Issue 	|   Pull Request	| 
 |---	    |---	            |
-|[JENKINS-58481](https://issues.jenkins-ci.org/browse/JENKINS-58481) | [#9](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/9)
+|[JENKINS-58481](https://issues.jenkins-ci.org/browse/JENKINS-58481) | [#9](https://github.com/jenkinsci/gitlab-branch-source-plugin/pull/9) 
 
 2) Add subgroup filter traits
 
