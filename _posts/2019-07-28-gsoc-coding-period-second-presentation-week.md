@@ -101,6 +101,6 @@ There are a few issues with the same order of their priorty:
 
 4. Add Tag Build Strategy - [JENKINS-58477](https://issues.jenkins-ci.org/browse/JENKINS-58477)
 
-Once the above issues are fixed, we can make our stable release to Jenkins Update Center. Also will be adding blog about the plugin in the jenkins.io.
+Once the above issues are fixed, we can make our stable release to Jenkins Update Center. Also will be adding blog about the plugin in the `jenkins.io`.
 
 Ciao.
