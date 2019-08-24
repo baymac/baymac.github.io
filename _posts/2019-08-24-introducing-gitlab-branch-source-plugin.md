@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Introducing new GitLab Branch Source Plugin"
-date:       2019-07-27 18:41:00
+date:       2019-08-24 19:30:00
 summary:    "Final summary for GSoC Evaluation"
 
 categories: jenkins gitlab plugins pipeline multibranch gsoc gsoc2019
@@ -12,7 +12,7 @@ The GitLab Branch Source Plugin has come out of its beta stage and has been rele
 * Import a single project's branches as jobs from a GitLab user/group/subgroup (Multibranch Pipeline Job)
 * Import all or a subset of projects as jobs from a GitLab user/group/subgroup (GitLab Group Job or GitLab Folder Organization)
 
-The GitLab Group project scans the projects, importing the pipeline jobs it identifies based on the criteria provided. After a project is imported, Jenkins immediately runs the jobs based on the `Jenkinsfile` pipeline script and notifies the status to GitLab Pipeline Status. This plugin unlike other Branch Source Plugins provides GitLab server configuration which can be configured in Configure System. Jenkins Configuration as Code (JCasC) can also be used to configure the server. To learn more about server configuration see my link:https://jenkins.io/blog/2019/06/29/phase-1-multibranch-pipeline-support-for-gitlab/[previous blog post].
+The GitLab Group project scans the projects, importing the pipeline jobs it identifies based on the criteria provided. After a project is imported, Jenkins immediately runs the jobs based on the `Jenkinsfile` pipeline script and notifies the status to GitLab Pipeline Status. This plugin unlike other Branch Source Plugins provides GitLab server configuration which can be configured in Configure System. Jenkins Configuration as Code (JCasC) can also be used to configure the server. To learn more about server configuration see my [previous blog post](https://jenkins.io/blog/2019/06/29/phase-1-multibranch-pipeline-support-for-gitlab/).
 
 ## Requirements
 

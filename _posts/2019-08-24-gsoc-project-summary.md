@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "GSoC Project Summary"
-date:       2019-07-27 18:41:00
+date:       2019-08-24 20:00:00
 summary:    "Final summary for GSoC Evaluation"
 
 categories: jenkins gitlab plugins pipeline multibranch gsoc gsoc2019
@@ -110,7 +110,7 @@ Improvements to GitLab Branch Source Plugin, lots of improvements including majo
 
 * Blogs
     * [Coding phase 3 summary](https://baymac.github.io/2019/08/introducing-gitlab-branch-source-plugin)
-    * [Ninth Week](https://baymac.github.io/2019/07/gsoc-coding-period-second-presentation-week)
+    * [Ninth Week](https://baymac.github.io/2019/08/gsoc-coding-period-second-presentation-week)
 
 ## Meeting Schedule
 
