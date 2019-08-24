@@ -29,11 +29,11 @@ Branch Source. One stretch goal is to add GitLab Pipeline support for Blueocean.
 * [IMPROVED] GitLab Plugin that is lightweight and provides build triggers, web hooks management and other API support
 * [NEW] Pipeline Support for GitLab in Blueocean
 
-For more details, see this Google Doc - https://docs.google.com/document/d/1YpuCC129U8KPXAwiXRXQ_4XWuLursPGl3rzQjz43-CY/edit?usp=sharing[Proposal]
+For more details, see my [GSoC Proposal](https://docs.google.com/document/d/1YpuCC129U8KPXAwiXRXQ_4XWuLursPGl3rzQjz43-CY/edit?usp=sharing)
 
 ## Evaluation Phase 1
 
-Complete implementation with documentation and plugin release of `GitLab API Plugin` that wraps the https://github.com/gmessner/gitlab4j-api/[gitlab4j-api] into a plugin 
+Complete implementation with documentation and plugin release of `GitLab API Plugin` that wraps the [gitlab4j-api](https://github.com/gmessner/gitlab4j-api/) into a plugin 
 
 * Wiki - [GitLab+API+Plugin](https://wiki.jenkins.io/display/JENKINS/GitLab+API+Plugin)
 * Repo - [jenkinsci/gitlab-api-plugin](https://github.com/jenkinsci/gitlab-api-plugin)
