@@ -1,10 +1,13 @@
 /* Basscss Base Typography */
 
 body {
-  font-family: $font-family;
-  line-height: $line-height;
-  font-size: 100%;
-  font-weight: 300;
+  // font-family: $font-family;
+  // line-height: $line-height;
+  // font-size: 0.15rem;
+  // font-style: normal;
+  // font-variant: normal;
+  // font-weight: 500;
+  font: normal normal normal #{5}/#{1.6} $font-family
 }
 
 h1,

@@ -1,12 +1,13 @@
 // Typography
 $base-font-size: 18px !default;
 $bold-font-weight: bold !default;
-$font-family: 'Merriweather', 'PT Serif', Georgia, 'Times New Roman', serif !default;
+$font-family: Helvetica Neue, 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial,
+sans-serif;
 $line-height: 1.5 !default;
-$heading-font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif !default;
+$heading-font-family: Helvetica Neue, 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 $heading-font-weight: 900 !default;
 $heading-line-height: 1.25 !default;
-$monospace-font-family: 'monospace' !default;
+$monospace-font-family: Menlo, 'Roboto Mono', Courier New, monospace;
 $h1: 1.68rem !default;
 $h2: 1.5rem !default;
 $h3: 1.25rem !default;
@@ -51,7 +52,7 @@ $darken-1: rgba(#000,.0625) !default;
 $darken-2: rgba(#000,.125) !default;
 $darken-3: rgba(#000,.25) !default;
 $darken-4: rgba(#000,.5) !default;
-$my-blue: rgba(93, 141, 237, 0.80);
+$my-blue: #3C97EF;
 
 // Links
 $link-color: $green;
@@ -118,6 +119,6 @@ $hljs-chunk: $light-gray;
 $footer-border-top: thin solid #000;
 $footer-padding: $space-3;
 $footer-color: #fff;
-$footer-bg-color: #000;
+$footer-bg-color: #202020;
 $footer-font-weight: 300;
 $footer-font-size: .75rem;
