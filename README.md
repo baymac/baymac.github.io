@@ -1,12 +1,12 @@
 # baymac.github.io
 
-My personal blog.
+Personal blog by [Parichay](https://twitter.com/baymac04/).
 
 ## Build Locally
 
 All steps for Mac OS Catalina
 
-## Install Ruby:
+### Install Ruby:
 
 Ruby also comes with Mac by default. You might not want to use/modify that version. If you want use it skip this step.
 
@@ -20,7 +20,7 @@ Add brew ruby path to your shell config:
 echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
 ```
 
-## Local Install bundler and Jekyll:
+### Local Install bundler and Jekyll:
  
  ```
  gem install --user-install bundler jekyll
@@ -40,7 +40,7 @@ Verify gem path setting properly with:
 gem env
 ```
 
-## Install github pages dependencies
+### Install github pages dependencies
 
 Go to the Root of this repo and run:
 
@@ -48,10 +48,14 @@ Go to the Root of this repo and run:
 bundle install
 ```
 
-## Serve the static files on localhost
+### Serve the static files on localhost
 
 ```
 bundle exec jekyll serve
 ```
 
 By default server runs on port 4000. You can change it with `--port` option.
+
+## Acknowledgement
+
+This blog is inspired by https://github.com/johno/pixyll.
