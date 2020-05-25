@@ -58,4 +58,4 @@ By default server runs on port 4000. You can change it with `--port` option.
 
 ## Acknowledgement
 
-This blog is inspired by https://github.com/johno/pixyll.
+This blog uses template by https://github.com/johno/pixyll. Some design inspirations are from https://github.com/taniarascia/taniarascia.com/.
