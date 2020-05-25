@@ -34,7 +34,7 @@ echo 'export PATH="$HOME/.gem/ruby/X.X.X/bin:$PATH"' >> ~/.zshrc
 
 where X.X.X is your ruby version. Find it with `ruby -v`
 
-Verify gem path setting properly with:
+Verify if gem path is set properly with:
 
 ```
 gem env
