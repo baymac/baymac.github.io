@@ -1,7 +1,5 @@
 # baymac.github.io
 
-Personal blog by [Parichay](https://twitter.com/baymac04/).
-
 ## Build Locally
 
 All steps for Mac OS Catalina
